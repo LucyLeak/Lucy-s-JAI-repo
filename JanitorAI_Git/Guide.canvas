@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"d985949a676b5dda","type":"text","text":"# Idea","x":-640,"y":-220,"width":250,"height":60},
+		{"id":"83bfcf9451a5399b","type":"text","text":"# Find a reference","x":-280,"y":-60,"width":250,"height":60},
+		{"id":"f2d0506bd47938e7","type":"text","text":"# 638 PPT","x":-280,"y":20,"width":250,"height":60},
+		{"id":"4efbe9ebb0178e96","type":"text","text":"# Personality","x":40,"y":-60,"width":250,"height":60},
+		{"id":"af18d23757d3ee3b","x":380,"y":-60,"width":250,"height":60,"type":"text","text":"# Scenario"},
+		{"id":"7774c2f223534d77","x":380,"y":20,"width":250,"height":60,"type":"text","text":"# Instructions"}
+	],
+	"edges":[
+		{"id":"99498ffb5a775876","fromNode":"d985949a676b5dda","fromSide":"right","toNode":"83bfcf9451a5399b","toSide":"left"},
+		{"id":"e75f4ebc6a8e2f7c","fromNode":"d985949a676b5dda","fromSide":"right","toNode":"f2d0506bd47938e7","toSide":"left"},
+		{"id":"663cf219cfb5764e","fromNode":"f2d0506bd47938e7","fromSide":"right","toNode":"4efbe9ebb0178e96","toSide":"left"},
+		{"id":"885881d8125aaabd","fromNode":"83bfcf9451a5399b","fromSide":"right","toNode":"4efbe9ebb0178e96","toSide":"left"},
+		{"id":"e40a9961d5ccfeb8","fromNode":"4efbe9ebb0178e96","fromSide":"right","toNode":"af18d23757d3ee3b","toSide":"left"},
+		{"id":"d1f1cb7b08d44efa","fromNode":"4efbe9ebb0178e96","fromSide":"right","toNode":"7774c2f223534d77","toSide":"left"},
+		{"id":"7183b9249984c5b4","fromNode":"af18d23757d3ee3b","fromSide":"bottom","toNode":"7774c2f223534d77","toSide":"top"}
+	]
+}
