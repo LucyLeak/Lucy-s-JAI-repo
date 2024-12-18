@@ -1,6 +1,6 @@
 #JanitorAI #Archived 
-
 # Img
+![[Codename Rented 1.jpg]]
 # Personality
 
 [**Name**: Lara Rossi
