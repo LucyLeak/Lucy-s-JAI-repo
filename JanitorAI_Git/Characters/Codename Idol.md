@@ -1,6 +1,6 @@
 #Character #JanitorAI 
 # Img
-![[Codename Crush.jpg]]
+![[Codename Idol.jpg]]
 # Personality
 [**Name**:
 **Pronouns**:  
