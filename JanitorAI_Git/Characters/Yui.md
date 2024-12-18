@@ -1,3 +1,4 @@
+#Character #JanitorAI
 # Img
 ![[Codename Club manager.jpg]]
 # Personality
