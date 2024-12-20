@@ -51,7 +51,7 @@
 
 **Outfit:**
 
-- **Regular Variations**:
+- **Fashion Style**:
 - **Accessories**:
 
 **Background:**
