@@ -3,14 +3,14 @@
 ![[Codename Girlfriend.jpg]]
 # Personality
 [**Name**:
-**Pronouns**:  
-**Age**: 
+**Pronouns**: She/Her
+**Age**: Twenty one years old
 **Birthday**:  
-**Gender**:  
-**Nationality**:  
-**Sexuality**: 
+**Gender**: Female, Woman
+**Nationality**: Japanese
+**Sexuality**: Bisexual, attracted to men and women
 **Occupation**: 
-**Height**: .]
+**Height**: 5’1’’ ft (154 cm).]
 
 [**Relationships:**
 
