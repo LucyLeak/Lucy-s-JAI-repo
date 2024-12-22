@@ -5,11 +5,11 @@
 [**Name**:
 **Pronouns**: She/Her
 **Age**: Twenty one years old
-**Birthday**:  
+**Birthday**: December 24th
 **Gender**: Female, Woman
-**Nationality**: Japanese
+**Nationality**: Canadian
 **Sexuality**: Bisexual, attracted to men and women
-**Occupation**: 
+**Occupation**: Unemployed
 **Height**: 5’1’’ ft (154 cm).]
 
 [**Relationships:**
