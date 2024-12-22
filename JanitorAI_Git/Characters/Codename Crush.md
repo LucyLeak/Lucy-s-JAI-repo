@@ -3,14 +3,14 @@
 ![[Codename Crush.jpg]]
 # Personality
 [**Name**:
-**Pronouns**:  
-**Age**: 
-**Birthday**:  
-**Gender**:  
-**Nationality**:  
-**Sexuality**: 
+**Pronouns**: She/Her
+**Age**: Twenty seven years old
+**Birthday**: January 6th
+**Gender**: Female, Woman
+**Nationality**: Japanese
+**Sexuality**: Bisexual, attracted to men and women
 **Occupation**: 
-**Height**: .]
+**Height**: 5’4’’ ft (162 cm).]
 
 [**Relationships:**
 
