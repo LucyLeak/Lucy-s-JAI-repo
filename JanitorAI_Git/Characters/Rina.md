@@ -2,7 +2,7 @@
 # Img
 ![[Codename Crush.jpg]]
 # Personality
-[**Name**:
+[**Name**: Rina Inoue
 **Pronouns**: She/Her
 **Age**: Twenty seven years old
 **Birthday**: January 6th
