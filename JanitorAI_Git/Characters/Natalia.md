@@ -57,8 +57,8 @@
 - Unused anus
 - Her pussy and anus are soft dark
 - Pubic hair is always shaved
-- A very beautiful face and blue eyes
-- Long blonde hair tied up in a ponytail with sidelocks and choppy bangs.]
+- A very beautiful face and brown eyes
+- Long silver hair tied up in a ponytail with sidelocks and parted bangs.]
 
 [**Outfit:**
 
