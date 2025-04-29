@@ -1,6 +1,12 @@
 <style>
   /*Site*/
-  .css-79elbk, .css-70qvj9, .css-wjj1lc, .css-hjkukh {
+  body {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    word-wrap: break-word;
+    color: #e2e2e2;
+  }
+  .css-79elbk, .css-70qvj9, .css-1wnr83a, .css-wjj1lc, .css-hjkukh {
     display: none;
   }
   .css-1wfbrwg {
@@ -28,14 +34,14 @@
   [data-_sBreadCrumbPosition=Right] #HeadlineWrapper #Headline {
     justify-content: flex-end;
   }
-  #HeadlineWrapper #Headline {
+  #HeadlineWrapper, #Headline {
     align-items: center;
     color: #fff;
     display: flex;
     flex-basis: 50%;
     flex-grow: 1;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 5em 0em 10em 0em;
     width: 100%;
     z-index: 1;
   }
@@ -56,7 +62,7 @@
     padding: 0;
   }
   h1, h2, h3 {
-    font-weight: bold;
+    font-weight: bold !important;
   }
   a {
     cursor: pointer;
@@ -107,6 +113,8 @@
     display: inline-block;
     vertical-align: middle;
     flex-shrink: 0;
+    height: 16px;
+    width: 16px;
   }
   #CoreFuction {
     position: relative;
@@ -115,8 +123,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Mantém as colunas na mesma linha */
-    gap: 1em; /* Espaçamento entre colunas */
+    flex-wrap: nowrap;
+    gap: 1em;
   }
   #CoreFunction .row>.column {
     box-sizing: border-box;
@@ -124,34 +132,40 @@
     -webkit-box-flex: 0;
     flex: 0 0 auto;
     padding-top: .5em;
+    background-color: #4d4d4d24;
   }
-  #CoreFunction .row > .column {
+  #CoreFunction .row>.column {
     flex: 1;
     min-width: 300px;
   }
 
-  #CoreFunction.cf .row>.column.xs-12 {
+  #CoreFunction.cf .row>.column .lg-3 {
     flex-basis: 100%;
     max-width: 100%;
   }
-  #CoreFunction .row>.column.lg-3 {
-    flex-basis: 25%;
-    max-width: 25%;
+  #CoreFunction .row>.column .lg-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  #CoreFunction>.row>.column:last-child {
+    border-right: 0;
   }
   #CoreFunction .row>.column {
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
-    padding-top: .5em;
   }
   #CoreFunction>.row>.column:not(:first-child) {
     background: rgb(255 255 255 / 3%);
     border-right: 1px solid rgba(0,0,0,0.25);
   }
+  #CoreFunction>.row>.column:not(:first-child) .Module, #CoreFunction>.row>.column:not(:first-child) {
+    border-bottom-color: rgb(0 0 0 / 25%);
+  }
   /*Identity*/
   #IdentityModule {
-    text-align: center !important;
+    text-align: center;
   }
   #IdentityModule .AvatarCore {
     margin-bottom: .5em;
@@ -231,8 +245,12 @@
   /*Buddy*/
   .AutoGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 0.5em;
+    grid-template-columns: 50px 3rem 50px 0.9fr;
+    gap: 0.5rem 1rem;
+  }
+  :where(#BuddiesModule) .AvatarGrid {
+    place-content: center;
+    place-items: center;
   }
   /*Announcement*/
   .PageInfo {
@@ -256,6 +274,14 @@
     contain-intrinsic-size: auto 200px;
     gap: .25;
   }
+  .Record .PreviewImage {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top center;
+    background-color: #0d0d0d80;
+    width: 100%;
+    max-height: 8em;
+  }
   .Record .PreviewWrapper {
     position: relative;
   }
@@ -269,6 +295,93 @@
     color: #FFE033;
     text-shadow: #FFE033;
   }
+  /*Core Stats*/
+  #CoreStatsModule .Card :where(.ItemCountModule,span) {
+    font-size: 1.25rem;
+  }
+  #CoreStatsModule .Content {
+    padding: 0 0 .5em 0;
+  }
+  :where(#CoreStatsModule) .Cluster {
+    justify-content: center;
+  }
+  #CoreStatsModule .Card {
+    gap: .25rem;
+    align-items: center;
+    min-width: 10em;
+  }
+  :where(#CoreStatsModule) .Card {
+    background: #3c4044;
+    border-radius: 3px;
+    font-size: .8rem;
+    padding: .25em;
+  }
+  .Cluster>*, .ClusterInline>*, .Stack>*, .Switcher>* {
+    min-width: 0;
+  }
+  .Stack {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  /*End*/
+  /*Mobile*/
+  @media only screen and (max-width: 600px) {
+    #CoreFunction {
+        font-size: 90%;
+    }
+    #CoreFunction .row {
+      flex-wrap: wrap !important;
+      gap: 0.5em !important;
+    }
+    #CoreFunction .row > .column {
+      flex: 1 1 100% !important;
+      min-width: unset !important;
+      width: 100% !important;
+      margin-right: 0 !important;
+    }
+    #CoreFunction .row > .column[style*="width: 600px"] {
+      width: 100% !important;
+    }
+    .AutoGrid {
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)) !important;
+      gap: 0.5rem !important;
+    }
+    #PageTitle {
+      font-size: 2em !important;
+    }
+    .PageModule > h2 {
+      font-size: 1rem !important;
+    }
+    #IdentityModule .MemberLink {
+      font-size: 1.2rem !important;
+    }
+  }
+  /*Diverse*/
+  @media (max-width: 1024px) {
+    #CoreFunction .row > .column[style*="width: 600px"] {
+      width: 100% !important;
+    }
+  }
+  @media (max-width: 768px) {
+    #CoreFunction .row {
+      flex-wrap: wrap !important;
+      gap: 0.5em !important;
+    }
+    #CoreFunction .row > .column {
+      flex: 1 1 100% !important;
+      min-width: unset !important;
+      width: 100% !important;
+    }
+}
+@media (max-width: 480px) {
+  #CoreStatsModule .Content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  #PageTitle {
+    font-size: 1.75em !important;
+  }
+}
 </style>
 <div class="MainCore">
   <div id="CoreHeader">
@@ -277,7 +390,7 @@
         <div id="HealineWrapper">
           <div id="Headline">
             <div>
-              <h1 id="PageTitle">You found me!</h1>
+              <h1 id="PageTitle" style="font-family: 'Open Sans', sans-serif;">LucyLeak</h1>
             </div>
           </div>
         </div>
@@ -286,7 +399,7 @@
   </div>
   <div id="CoreFunction" class="cf">
     <div class="row">
-      <div class="column">
+      <div class="column" style="width: 300px;">
         <div class="xs-12 sm-6 md-6 lg-3">
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
@@ -313,22 +426,24 @@
               </ul>
             </div>
           </div>
-          <div id="OnlineStatusModule" class="PageModule StrangeBerryModule">
+          <div id="OnlineStatusModule" class="PageModule StrangeBerryModule Module">
             <h2>Online Status</h2>
             <div class="Content">
               <dl>
                 <dt>Status</dt>
-                <dd><div id="StateLabel"><div class="GreenColor">Probably</div></dd>
+                <dd><div id="StateLabel"><div class="GreenColor">Following myself</div></dd>
                 <dt>Last Seen</dt>
                 <dd>
-                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">Never</time>
+                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">10s</time>
                   <span>@</span>
                   <span class="BuddyLocation">
                     <a href="https://janitorai.com">Home</a>
                      > 
-                    <a href="https://janitorai.com">Characters</a>
+                    <a href="https://janitorai.com/search?search=LucyLeak&mode=all">Characters</a>
                      > 
                     <a href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">LucyLeak</a>
+                     >
+                     Editing
                   </span>
                 </dd>
                 <dt>Time Online</dt>
@@ -338,7 +453,7 @@
               </dl>
             </div>
           </div>
-          <div id="Bio" class="GenericKeyListModule PageModule StrangeBerryModule">
+          <div id="Bio" class="GenericKeyListModule PageModule StrangeBerryModule Module">
             <h2>Bio</h2>
             <div class="Content">
               <dl>
@@ -355,7 +470,7 @@
               </dl>
             </div>
           </div>
-          <div id="ContactInfo" class="GenericKeyListModule PageModule StrangeBerryModule">
+          <div id="ContactInfo" class="GenericKeyListModule PageModule StrangeBerryModule Module">
             <h2>Contact Info</h2>
             <div class="Content">
               <dt>Discord</dt>
@@ -378,7 +493,7 @@
               </dd>
             </div>
           </div>
-          <div id="SoftwareKit" class="GenericKeyListModule PageModule StrangeBerryModule">
+          <div id="SoftwareKit" class="GenericKeyListModule PageModule StrangeBerryModule Module">
             <h2>Software Kit</h2>
             <div class="Content">
               <dl>
@@ -397,7 +512,7 @@
       </div>
       <div class="column">
         <div class="xs-12 sm-6 md-6 lg-3">
-          <div id="BuddiesModule" config="[object Object]" class="PageModule StrangeBerryModule">
+          <div id="BuddiesModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
             <h2><a href="https://github.com/LucyLeak/">Buddies</a></h2>
             <div class="Content Flow" aria-expanded="false">
               <div class="AutoGrid AvatarGrid">
@@ -431,8 +546,48 @@
           </div>
         </div>
       </div>
-      <div class="column">
-        <div class="xs-12 sm-6 md-6 lg-3">
+      <div class="column" style="width: 600px;">
+        <div class="xs-12 sm-12 md-12 lg-6">
+          <div id="CoreStatsModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
+            <h2>Core Stats</h2>
+            <div class="Content Cluster">
+              <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak#profile-tabs">
+                <div class="ItemCountModule">44</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Characters</small>
+                </div>
+              </a>
+              <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
+                <div class="ItemCountModule">1,384</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Followers</small>
+                </div>
+              </a>
+              <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
+                <div class="ItemCountModule">5</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Buddies</small>
+                </div>
+              </a>
+              <div class="Card Stack">
+                <div class="ItemCountModule">9mo</div>
+                <div class="Cluster">Account Age</div>
+              </div>
+              <div class="Card Stack">
+                <div>0</div>
+                <div class="Cluster">Test 1</div>
+              </div>
+            </div>
+          </div>
           <div id="SubmissionsList" class="PageModule StrangeBerryModule">
             <h2>
               <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo">Announcements</a>
@@ -443,6 +598,26 @@
                   <div>3 records</div>
                 </div>
                 <div class="RecordsGrid" aria-expanded="false">
+                  <div class="Record Flow ToolRecord">
+                    <div class="PreviewWrapper">
+                      <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
+                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/IMG%20fail.png?raw=true" width="220" height="125" decoding="async">
+                      </a>
+                    </div>
+                    <div class="Identifiers Cluster">
+                      <a class="Name" href="https://github.com/LucyLeak/Lucy-s-JAI-repo">New css update</a>
+                    </div>
+                  </div>
+                  <div class="Record Flow ToolRecord">
+                    <div class="PreviewWrapper">
+                      <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
+                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/IMG%20fail.png?raw=true" width="220" height="125" decoding="async">
+                      </a>
+                    </div>
+                    <div class="Identifiers Cluster">
+                      <a class="Name" href="https://github.com/LucyLeak/Lucy-s-JAI-repo">New css update</a>
+                    </div>
+                  </div>
                   <div class="Record Flow ToolRecord">
                     <div class="PreviewWrapper">
                       <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
