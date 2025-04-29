@@ -1,0 +1,323 @@
+<style>
+  /*Modules*/
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, acronym, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    font-size: 100%;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFE033;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    max-width: 100%;
+    overflow: clip;
+  }
+  ol, ul, menu, li {
+    list-style-position: outside;
+  }
+  .PageModule>h2 {
+    font-size: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 0 .5em 0;
+    padding: 0 1em 0 0;
+  }
+  .PageModule>h2:after {
+    height: .1em;
+    margin: .25em 0 0 0;
+    display: block;
+    content: "";
+    width: 2em;
+    background: #707070;
+  }
+  .PageModule {
+    display: block;
+    margin: .5em 0 0 0;
+    padding: .5em 1em 1em 1em;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255 255 255 / 5%);
+  }
+  .PageModule>.Content {
+    position: relative;
+    padding: .5em;
+  }
+  #spriteIcon {
+    image-rendering: pixelated;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+  #CoreFuction {
+    position: relative;
+  }
+  #CoreFunction .row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Mantém as colunas na mesma linha */
+    gap: 1em; /* Espaçamento entre colunas */
+  }
+  #CoreFunction .row>.column {
+    box-sizing: border-box;
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    padding-top: .5em;
+  }
+  #CoreFunction .row > .column {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  #CoreFunction.cf .row>.column.xs-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  #CoreFunction .row>.column.lg-3 {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  #CoreFunction .row>.column {
+    box-sizing: border-box;
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    padding-top: .5em;
+  }
+  #CoreFunction>.row>.column:not(:first-child) {
+    background: rgb(255 255 255 / 3%);
+    border-right: 1px solid rgba(0,0,0,0.25);
+  }
+  /*Identity*/
+  #IdentityModule {
+    text-align: center !important;
+  }
+  #IdentityModule .AvatarCore {
+    margin-bottom: .5em;
+  }
+  .Avatar, .MemberLink {
+    position: relative;
+  }
+  .Avatar {
+    display: inline-block;
+    line-height: 0;
+  }
+  .Avatar img {
+    width: 100%;
+    height: 100%;
+  }
+  #IdentityModule .MemberLink {
+    margin-bottom: .5em;
+    font-size: 1.5rem;
+  }
+  #IdentityModule .UserTitle {
+    font-size: 0.9rem;
+  }
+  #IdentityModule .KeyInfo li {
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+  #IdentityModule .KeyInfo span, #IdentityModule .KeyInfo .itemCount {
+    font-size: 1.25rem;
+  }
+  #IdentityModule .KeyInfo small {
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: -2px;
+    display: block;
+  }
+  /*Online*/
+  dt {
+    font-size: 1rem;
+    margin-bottom: .25em;
+    color: rgba(255, 255, 255, .5);
+  }
+  dt:after {
+    content: ":";
+  }
+  dd {
+    margin: .25em 0 .5em .125em;
+    padding: 0;
+  }
+  #StateLabel {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: .25em .5em;
+    margin: .125em;
+    border-radius: .25em;
+    background: #3c4044;
+  }
+  #StateLabel .GreenColor {
+    color: #6EE16C;
+  }
+  .LessThan5minsOld {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #FF4E4E;
+  }
+  /*Bio*/
+  /*Contact*/
+  #spriteIcon .ContactTypeIcon {
+    width: 32px;
+    height: 32px;
+  }
+  /*Module 2*/
+  /*Buddy*/
+  .AutoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 0.5em;
+  }
+</style>
+<div class="MainCore">
+  <div id="CoreFunction" class="cf">
+    <div class="row">
+      <div class="column">
+        <div class="xs-12 sm-6 md-6 lg-3" data-_nwidth="100 200 300">
+          <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
+            <div class="Content">
+              <a class="AvatarCore" href="https://files.catbox.moe/9c045g.png" aria-expanded="false">
+                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/9c045g.png" alt="LucyLeak">
+              </a>
+              <div>
+                <a class="MemberLink" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
+                  <span>Lucy Leak</span>
+                </a>
+              </div>
+              <div class="UserTitle">Literally Lucy!</div>
+              <ul class="KeyInfo">
+                <li></li>
+                <li></li>
+                <li>
+                  <div class="itemcount">3634841</div>
+                  <small>ID Number</small>
+                </li>
+                <li>
+                  <span>July 16, 2024 @ 12:19 AM GMT</span>
+                  <small>Join Date</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="OnlineStatusModule" class="PageModule StrangeBerryModule">
+            <h2>Online Status</h2>
+            <div class="Content">
+              <dl>
+                <dt>Status</dt>
+                <dd><div id="StateLabel"><div class="GreenColor">Probably</div></dd>
+                <dt>Last Seen</dt>
+                <dd>
+                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">Never</time>
+                  <span>@</span>
+                  <span class="BuddyLocation">
+                    <a href="https://janitorai.com">Home</a>
+                     > 
+                    <a href="https://janitorai.com">Characters</a>
+                     > 
+                    <a href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">LucyLeak</a>
+                  </span>
+                </dd>
+                <dt>Time Online</dt>
+                <dd>
+                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">36000s</time>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div id="Bio" class="GenericKeyListModule PageModule StrangeBerryModule">
+            <h2>Bio</h2>
+            <div class="Content">
+              <dl>
+                <dt>Cat or Dog</dt>
+                <dd>Cat</dd>
+                <dt>Write type</dt>
+                <dd>Casual</dd>
+                <dt>Favorite Game</dt>
+                <dd>Persona 4, Zenless Zone Zero, Reverse 1999</dd>
+                <dt>Country</dt>
+                <dd>Brazil</dd>
+                <dt>Familiar languages</dt>
+                <dd>Portuguese, English, Japanese, Korean</dd>
+              </dl>
+            </div>
+          </div>
+          <div id="ContactInfo" class="GenericKeyListModule PageModule StrangeBerryModule">
+            <h2>Contact Info</h2>
+            <div class="Content">
+              <dt>Discord</dt>
+              <dd>
+                <div id="spriteIcon">
+                  <div class="ContactTypeIcon">
+                    <img class="DiscordIcon" src="https://files.catbox.moe/9c045g.png">
+                  </div>
+                </div>
+                <span> lucyleak</span>
+              </dd>
+              <dt>Patreon</dt>
+              <dd>
+                <div id="spriteIcon">
+                  <div class="ContactTypeIcon">
+                    <img class="PatreonIcon" src="https://files.catbox.moe/9c045g.png">
+                  </div>
+                </div>
+                <span><a href="https://www.patreon.com/c/kklucy"> kklucy</a></span>
+              </dd>
+            </div>
+          </div>
+          <div id="SoftwareKit" class="GenericKeyListModule PageModule StrangeBerryModule">
+            <h2>Software Kit</h2>
+            <div class="Content">
+              <dl>
+                <dt>Graphic editor</dt>
+                <dd>Figma</dd>
+                <dt>2D painting Program</dt>
+                <dd>Clip Studio Paint</dd>
+                <dt>Writing Program</dt>
+                <dd>Obsidian</dd>
+                <dt>IDE</dt>
+                <dd>Visual Studio Code</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column" data-_nwidth="100 200 300">
+        <div class="xs-12 sm-6 md-6 lg-3" data-_nwidth="100 200 300">
+          <div id="BuddiesModule" config="[object Object]" class="PageModule StrangeBerryModule">
+            <h2><a href="https://github.com/LucyLeak/">Buddies</a></h2>
+            <div class="Content Flow" aria-expanded="false">
+              <div class="AutoGrid AvatarGrid">
+                <div>
+                  <a class="Avatar Offline" href="https://github.com/LucyLeak/" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/18dda275-1a8c-4457-bb40-a8b9e62bf58d_55613f78-38da-453b-a06e-7af9297f0145.webp?width=50">
+                  </a>
+                </div>
+                <div>
+                  <a class="Avatar Offline" href="https://github.com/LucyLeak/" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/18dda275-1a8c-4457-bb40-a8b9e62bf58d_55613f78-38da-453b-a06e-7af9297f0145.webp?width=50">
+                  </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
