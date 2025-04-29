@@ -1,4 +1,15 @@
 <style>
+  /*Site*/
+  .css-79elbk, .css-70qvj9, .css-wjj1lc, .css-hjkukh {
+    display: none;
+  }
+  .css-1wfbrwg {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .css-7ey189:hover, .css-7ey189[data-hover] {
+    box-shadow: none;
+  }
   /*Modules*/
   html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, acronym, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     font-size: 100%;
@@ -58,8 +69,6 @@
     display: inline-block;
     vertical-align: middle;
     flex-shrink: 0;
-    height: 16px;
-    width: 16px;
   }
   #CoreFuction {
     position: relative;
@@ -108,6 +117,8 @@
   }
   #IdentityModule .AvatarCore {
     margin-bottom: .5em;
+    display: flex;
+    justify-content: space-around;
   }
   .Avatar, .MemberLink {
     position: relative;
@@ -119,6 +130,8 @@
   .Avatar img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
   }
   #IdentityModule .MemberLink {
     margin-bottom: .5em;
@@ -183,16 +196,51 @@
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
     gap: 0.5em;
   }
+  /*Announcement*/
+  .PageInfo {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .Cluster {
+    gap: .5rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .RecordsGrid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(min(12em, 100%), 1fr));
+  }
+  .Record {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 200px;
+    gap: .25;
+  }
+  .Record .PreviewWrapper {
+    position: relative;
+  }
+  .Record .Identifiers {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .Name {
+    border-color: rgb(255, 224, 51);
+    font-family: "Open Sans", sans-serif;
+    color: #FFE033;
+    text-shadow: #FFE033;
+  }
 </style>
 <div class="MainCore">
   <div id="CoreFunction" class="cf">
     <div class="row">
       <div class="column">
-        <div class="xs-12 sm-6 md-6 lg-3" data-_nwidth="100 200 300">
+        <div class="xs-12 sm-6 md-6 lg-3">
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
               <a class="AvatarCore" href="https://files.catbox.moe/9c045g.png" aria-expanded="false">
-                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/9c045g.png" alt="LucyLeak">
+                <img loading="lazy" class="ImgAvatar" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Pfp.png?raw=true" alt="LucyLeak">
               </a>
               <div>
                 <a class="MemberLink" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
@@ -263,7 +311,7 @@
               <dd>
                 <div id="spriteIcon">
                   <div class="ContactTypeIcon">
-                    <img class="DiscordIcon" src="https://files.catbox.moe/9c045g.png">
+                    <img class="DiscordIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Discord.png?raw=true">
                   </div>
                 </div>
                 <span> lucyleak</span>
@@ -272,7 +320,7 @@
               <dd>
                 <div id="spriteIcon">
                   <div class="ContactTypeIcon">
-                    <img class="PatreonIcon" src="https://files.catbox.moe/9c045g.png">
+                    <img class="PatreonIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
                   </div>
                 </div>
                 <span><a href="https://www.patreon.com/c/kklucy"> kklucy</a></span>
@@ -296,27 +344,70 @@
           </div>
         </div>
       </div>
-      <div class="column" data-_nwidth="100 200 300">
-        <div class="xs-12 sm-6 md-6 lg-3" data-_nwidth="100 200 300">
+      <div class="column">
+        <div class="xs-12 sm-6 md-6 lg-3">
           <div id="BuddiesModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <h2><a href="https://github.com/LucyLeak/">Buddies</a></h2>
             <div class="Content Flow" aria-expanded="false">
               <div class="AutoGrid AvatarGrid">
                 <div>
-                  <a class="Avatar Offline" href="https://github.com/LucyLeak/" aria-expanded="false">
-                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/18dda275-1a8c-4457-bb40-a8b9e62bf58d_55613f78-38da-453b-a06e-7af9297f0145.webp?width=50">
+                  <a class="Avatar Offline" href="https://janitorai.com/profiles/60c8ee34-a814-44db-99dd-5420b30f675d_profile-of-william-johnny" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/1-QS58OTxW_xbrmRLvDRu.webp?width=50">
                   </a>
                 </div>
                 <div>
-                  <a class="Avatar Offline" href="https://github.com/LucyLeak/" aria-expanded="false">
-                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/18dda275-1a8c-4457-bb40-a8b9e62bf58d_55613f78-38da-453b-a06e-7af9297f0145.webp?width=50">
+                  <a class="Avatar Offline" href="https://janitorai.com/profiles/f7ea4f46-d355-43f5-9045-50bca29f32c1_profile-of-seidhe" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/f7ea4f46-d355-43f5-9045-50bca29f32c1_18942850-285d-4686-84e8-df755b69c6d6.webp?width=50">
                   </a>
                 </div>
+                <div>
+                  <a class="Avatar Offline" href="https://janitorai.com/profiles/63f45c95-0320-444a-b886-026dc12f66c3_profile-of-sebas-bv" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/7MiXnl-0P6bfrLqi3HcMW.webp?width=50">
+                  </a>
+                </div>
+                <div>
+                  <a class="Avatar Offline" href="https://janitorai.com/profiles/41c114c2-1dd4-4e2f-85c9-0546516c3ad9_profile-of-mr-yami" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/GNKqwd2wXs-ErU33owAU_.webp?width=50">
+                  </a>
+                </div>
+                <div>
+                  <a class="Avatar Offline" href="https://civitai.com/user/KoreanwithaT" aria-expanded="false">
+                    <img loading="lazy" class="AvatarImage" src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a0735401-7f5d-4d8c-b4ad-276e90660c1c/width=450/Img.webp?width=50">
+                  </a>
+                </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="xs-12 sm-6 md-6 lg-3">
+          <div id="SubmissionsList" class="PageModule StrangeBerryModule">
+            <h2>
+              <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo">Announcements</a>
+            </h2>
+            <div class="Content Flow">
+              <div class="Flow">
+                <div class="Cluster PageInfo">
+                  <div>3 records</div>
+                </div>
+                <div class="RecordsGrid" aria-expanded="false">
+                  <div class="Record Flow ToolRecord">
+                    <div class="PreviewWrapper">
+                      <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
+                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://images.gamebanana.com/img/ss/tools/220-90_645869fa78476.jpg" width="220" height="125" decoding="async">
+                      </a>
+                    </div>
+                    <div class="Identifiers Cluster">
+                      <a class="Name" href="https://github.com/LucyLeak/Lucy-s-JAI-repo">Lorem</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
