@@ -1,4 +1,13 @@
 <style>
+  /*Animations*/
+  @keyframes HoverDisplayIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes HoverDisplayOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
   /*Site*/
   body {
     font-size: 1rem;
@@ -168,9 +177,11 @@
     text-align: center;
   }
   #IdentityModule .AvatarCore {
-    margin-bottom: .5em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centraliza horizontalmente o container */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
   }
   .Avatar, .MemberLink {
     position: relative;
@@ -178,6 +189,17 @@
   .Avatar {
     display: inline-block;
     line-height: 0;
+  }
+  .AvatarCore.HasClearanceLevel {
+    box-shadow: 0 0 0 .125em #FF4E4E, 0 0 .75em #FF4E4E;
+  }
+  .AvatarCore.IsRipeSupporter {
+    background: linear-gradient(to bottom, rgba(219, 37, 37, 0.75), rgba(219, 204, 37, 0.75), rgba(37, 219, 41, 0.75), rgba(37, 37, 218, 0.75), rgba(219, 37, 217, 0.75));
+    padding: .25em;
+    border-radius: .125em;
+  }
+  .AvatarCore.IsRipeSupporter img {
+    box-shadow: 0 0 0 .125em rgba(0, 0, 0, .75);
   }
   .Avatar img {
     width: 100%;
@@ -251,6 +273,74 @@
   :where(#BuddiesModule) .AvatarGrid {
     place-content: center;
     place-items: center;
+  }
+  #Tippy1, #Tippy2, #Tippy3, #Tippy4, #Tippy5 {
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+  }
+  #Tippy1 {
+    transform: translate(0em, 3.6em);
+  }
+  #Tippy2 {
+    transform: translate(4.2em, 3.6em);
+  }
+  #Tippy3 {
+    transform: translate(8.2em, 3.6em);
+  }
+  #Tippy4 {
+    transform: translate(12.4em, 3.6em);
+  }
+  #Tippy5 {
+    transform: translate(0em, 7.6em);
+  }
+  
+  .Tippy-box {
+    max-width: 512px;
+    transition-duration: 300ms;
+    position: relative;
+  }
+  .Tippy-content {
+    background: rgb(0 0 0 / 90%);
+    border-radius: 4px;
+    padding: .5em;
+    transition-duration: 300ms;
+  }
+  .Tippy-content .AvatarTooltip {
+    margin: -.5em;
+  }
+  .AvatarTooltip {
+    background-color: rgb(0 0 0 / 90%);
+    border-radius: .25em;
+    box-sizing: border-box;
+    max-width: 150px;
+    padding: .5em;
+  }
+  .AvatarTooltip .Column1 {
+    width: 100%;
+  }
+  .AvatarTooltip .Column {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .AvatarTooltip .Column div {
+    text-align: center;
+    padding: .5em .25em;
+  }
+  .AvatarTooltip .Column div strong {
+    display: block;
+  }
+  .AvatarTooltip .Column .OnlineStatus {
+    border-top: .125em solid rgba(255, 255, 255, .05);
+  }
+  .AvatarFunction:hover #Tippy1, .AvatarFunction:hover #Tippy2, .AvatarFunction:hover #Tippy3, .AvatarFunction:hover #Tippy4, .AvatarFunction:hover #Tippy5 {
+    display: block;
+    animation: HoverDisplayIn 300ms ease forwards;
+  }
+  .AvatarFunction:not(:hover) #Tippy1, .AvatarFunction:not(:hover) #Tippy2, .AvatarFunction:not(:hover) #Tippy3, .AvatarFunction:not(:hover) #Tippy4, .AvatarFunction:not(:hover) #Tippy5 {
+    animation: HoverDisplayOut 30ms ease forwards;
   }
   /*Announcement*/
   .PageInfo {
@@ -326,7 +416,7 @@
   }
   /*End*/
   /*Mobile*/
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     #CoreFunction {
         font-size: 90%;
     }
@@ -373,15 +463,15 @@
       min-width: unset !important;
       width: 100% !important;
     }
-}
-@media (max-width: 480px) {
-  #CoreStatsModule .Content {
-    grid-template-columns: repeat(2, 1fr) !important;
   }
-  #PageTitle {
-    font-size: 1.75em !important;
+  @media (max-width: 480px) {
+    #CoreStatsModule .Content {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    #PageTitle {
+      font-size: 1.75em !important;
+    }
   }
-}
 </style>
 <div class="MainCore">
   <div id="CoreHeader">
@@ -403,8 +493,8 @@
         <div class="xs-12 sm-6 md-6 lg-3">
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
-              <a class="AvatarCore" href="https://files.catbox.moe/9c045g.png" aria-expanded="false">
-                <img loading="lazy" class="ImgAvatar" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Pfp.png?raw=true" alt="LucyLeak">
+              <a class="AvatarCore HasClearanceLevel IsRipeSupporter HdAvatar" href="https://files.catbox.moe/9c045g.png" aria-expanded="false">
+                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/nynx2y.png" alt="LucyLeak" style="width: 150px; height: 150px; aspect-ratio: 1 / 1;">
               </a>
               <div>
                 <a class="MemberLink" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
@@ -434,7 +524,7 @@
                 <dd><div id="StateLabel"><div class="GreenColor">Following myself</div></dd>
                 <dt>Last Seen</dt>
                 <dd>
-                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">10s</time>
+                  <time class="TimeStamp LessThan5minsOld">10s</time>
                   <span>@</span>
                   <span class="BuddyLocation">
                     <a href="https://janitorai.com">Home</a>
@@ -448,7 +538,7 @@
                 </dd>
                 <dt>Time Online</dt>
                 <dd>
-                  <time class="TimeStamp LessThan5minsOld" datetime="2025-04-28T20:08:27.000Z">36000s</time>
+                  <time class="TimeStamp LessThan5minsOld">Always</time>
                 </dd>
               </dl>
             </div>
@@ -516,30 +606,130 @@
             <h2><a href="https://github.com/LucyLeak/">Buddies</a></h2>
             <div class="Content Flow" aria-expanded="false">
               <div class="AutoGrid AvatarGrid">
-                <div>
+                <div class="AvatarFunction">
                   <a class="Avatar Offline" href="https://janitorai.com/profiles/60c8ee34-a814-44db-99dd-5420b30f675d_profile-of-william-johnny" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/1-QS58OTxW_xbrmRLvDRu.webp?width=50">
                   </a>
+                  <div id="Tippy1">
+                    <div class="Tippy-box">
+                      <div class="Tippy-content">
+                        <div class="AvatarTooltip">
+                          <div class="Column Column1">
+                            <div class="KeyInfo">
+                              <a href="https://janitorai.com/profiles/60c8ee34-a814-44db-99dd-5420b30f675d_profile-of-william-johnny">William Jhonny</a>
+                              <small>Joined 11mo ago</small>
+                            </div>
+                            <div class="OnlineStatus">
+                              <dl>
+                                <dt>Content</dt>
+                                <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
+                <div class="AvatarFunction">
                   <a class="Avatar Offline" href="https://janitorai.com/profiles/f7ea4f46-d355-43f5-9045-50bca29f32c1_profile-of-seidhe" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/f7ea4f46-d355-43f5-9045-50bca29f32c1_18942850-285d-4686-84e8-df755b69c6d6.webp?width=50">
                   </a>
+                  <div id="Tippy2">
+                    <div class="Tippy-box">
+                      <div class="Tippy-content">
+                        <div class="AvatarTooltip">
+                          <div class="Column Column1">
+                            <div class="KeyInfo">
+                              <a href="https://janitorai.com/profiles/f7ea4f46-d355-43f5-9045-50bca29f32c1_profile-of-seidhe">Seidhe</a>
+                              <small>Joined 10mo ago</small>
+                            </div>
+                            <div class="OnlineStatus">
+                              <dl>
+                                <dt>Content</dt>
+                                <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
+                <div class="AvatarFunction">
                   <a class="Avatar Offline" href="https://janitorai.com/profiles/63f45c95-0320-444a-b886-026dc12f66c3_profile-of-sebas-bv" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/7MiXnl-0P6bfrLqi3HcMW.webp?width=50">
                   </a>
+                  <div id="Tippy3">
+                    <div class="Tippy-box">
+                      <div class="Tippy-content">
+                        <div class="AvatarTooltip">
+                          <div class="Column Column1">
+                            <div class="KeyInfo">
+                              <a href="https://janitorai.com/profiles/63f45c95-0320-444a-b886-026dc12f66c3_profile-of-sebas-bv">Sebas BV</a>
+                              <small>Joined 1y ago</small>
+                            </div>
+                            <div class="OnlineStatus">
+                              <dl>
+                                <dt>Content</dt>
+                                <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
+                <div class="AvatarFunction">
                   <a class="Avatar Offline" href="https://janitorai.com/profiles/41c114c2-1dd4-4e2f-85c9-0546516c3ad9_profile-of-mr-yami" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/GNKqwd2wXs-ErU33owAU_.webp?width=50">
                   </a>
+                  <div id="Tippy4">
+                    <div class="Tippy-box">
+                      <div class="Tippy-content">
+                        <div class="AvatarTooltip">
+                          <div class="Column Column1">
+                            <div class="KeyInfo">
+                              <a href="https://janitorai.com/profiles/41c114c2-1dd4-4e2f-85c9-0546516c3ad9_profile-of-mr-yami">Mr Yami</a>
+                              <small>Joined 1mo ago</small>
+                            </div>
+                            <div class="OnlineStatus">
+                              <dl>
+                                <dt>Content</dt>
+                                <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
+                <div class="AvatarFunction">
                   <a class="Avatar Offline" href="https://civitai.com/user/KoreanwithaT" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a0735401-7f5d-4d8c-b4ad-276e90660c1c/width=450/Img.webp?width=50">
                   </a>
+                  <div id="Tippy5">
+                    <div class="Tippy-box">
+                      <div class="Tippy-content">
+                        <div class="AvatarTooltip">
+                          <div class="Column Column1">
+                            <div class="KeyInfo">
+                              <a href="https://civitai.com/user/KoreanwithaT">KoreanwithaT</a>
+                              <small>Joined 3y ago</small>
+                            </div>
+                            <div class="OnlineStatus">
+                              <dl>
+                                <dt>Content</dt>
+                                <dd><div id="StateLabel"><div class="GreenColor">Ai Artist</div></dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 </div>
               </div>
@@ -569,6 +759,15 @@
                   <small>Followers</small>
                 </div>
               </a>
+              <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak#profile-tabs">
+                <div class="ItemCountModule">101,086</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Total chats</small>
+                </div>
+              </a>
               <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
                 <div class="ItemCountModule">5</div>
                 <div class="Cluster">
@@ -579,12 +778,31 @@
                 </div>
               </a>
               <div class="Card Stack">
-                <div class="ItemCountModule">9mo</div>
-                <div class="Cluster">Account Age</div>
+                <div class="ItemCountModule">~450</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Reactions</small>
+                </div>
               </div>
+              <a class="Card Stack" href="https://janitorai.com/search?mode=all&sort=popular&tag_id=42&page=1">
+                <div class="ItemCountModule">AnyPov</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Top tag</small>
+                </div>
+              </a>
               <div class="Card Stack">
-                <div>0</div>
-                <div class="Cluster">Test 1</div>
+                <div class="ItemCountModule">9mo</div>
+                <div class="Cluster">
+                  <div id="spriteIcon">
+                    <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Patreon.png?raw=true">
+                  </div>
+                  <small>Account age</small>
+                </div>
               </div>
             </div>
           </div>
@@ -610,22 +828,22 @@
                   </div>
                   <div class="Record Flow ToolRecord">
                     <div class="PreviewWrapper">
-                      <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
-                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/IMG%20fail.png?raw=true" width="220" height="125" decoding="async">
+                      <a href="https://janitorai.com/characters/92444f21-7e03-4c66-afb4-392e6f56728e_character-character-vote-announcement" class="Preview">
+                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://ella.janitorai.com/bot-avatars/c_TAiEki90xLuY3-ItZWJ.webp?width=1200" width="220" height="125" decoding="async">
                       </a>
                     </div>
                     <div class="Identifiers Cluster">
-                      <a class="Name" href="https://github.com/LucyLeak/Lucy-s-JAI-repo">New css update</a>
+                      <a class="Name" href="https://janitorai.com/characters/92444f21-7e03-4c66-afb4-392e6f56728e_character-character-vote-announcement">Character vote + Announcement</a>
                     </div>
                   </div>
                   <div class="Record Flow ToolRecord">
                     <div class="PreviewWrapper">
-                      <a href="https://github.com/LucyLeak/Lucy-s-JAI-repo" class="Preview">
-                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/IMG%20fail.png?raw=true" width="220" height="125" decoding="async">
+                      <a href="https://janitorai.com/characters/4c9ad061-7de3-46fa-bd2d-1b8167b09da7_character-small-talk-with-you" class="Preview">
+                        <img loading="lazy" class="PreviewImage" alt="Test" src="https://ella.janitorai.com/bot-avatars/awWpXPnA3wDTBg6ET2s1v.webp?width=1200" width="220" height="125" decoding="async">
                       </a>
                     </div>
                     <div class="Identifiers Cluster">
-                      <a class="Name" href="https://github.com/LucyLeak/Lucy-s-JAI-repo">New css update</a>
+                      <a class="Name" href="https://janitorai.com/characters/4c9ad061-7de3-46fa-bd2d-1b8167b09da7_character-small-talk-with-you">Small talk with you</a>
                     </div>
                   </div>
                 </div>
