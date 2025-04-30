@@ -15,6 +15,9 @@
     word-wrap: break-word;
     color: #e2e2e2;
   }
+  .css-7ey189 {
+    margin-right: 12em;
+  }
   .css-79elbk, .css-70qvj9, .css-1wnr83a, .css-wjj1lc, .css-hjkukh {
     display: none;
   }
@@ -24,6 +27,120 @@
   }
   .css-7ey189:hover, .css-7ey189[data-hover] {
     box-shadow: none;
+  }
+  /*Cards*/
+  .css-1s5evre {
+    height: 450px; 
+    position: relative; 
+    overflow: hidden;
+  }
+  .css-1q7rmf0 {
+    height: 450px; 
+    object-fit: cover; 
+    transition: filter 0.3s ease;
+  }
+  .css-1sxhvxh:hover .css-1q7rmf0 {
+    filter: brightness(50%);
+  }
+  .css-1s5evre > a {
+    display: flex; 
+    flex-direction: column-reverse; 
+    flex-wrap: nowrap;
+  }
+  .css-zgqw37 {
+    font-size: 1.25; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    text-align: center; 
+    width: 100%; 
+    z-index: 9999;
+    color: #ffe818;
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.37);
+    transition: 500ms;
+  }
+  .css-96l1id {
+    position: absolute; 
+    top: 120px; 
+    left: 0; 
+    width: 100%; 
+    height: 89px; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    opacity: 0; 
+    backface-visibility: hidden; 
+    transition: transform 0.6s, opacity 0.3s;
+    transform: rotateY(0deg) translate(0px, -100px);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+  .css-4ofde4 {
+    position: absolute; 
+    top: 240px; 
+    left: 0; 
+    width: 100%; 
+    height: 89px; 
+    text-align: center; 
+    padding: 10px; 
+    opacity: 0; 
+    transition: transform 0.6s, opacity 0.3s;
+    transform: rotateY(0deg) translate(0px, -100px);
+    display: flex; align-items: center; 
+    justify-content: center;
+  }
+  .css-1sxhvxh:hover .css-96l1id, .css-1sxhvxh:hover .css-4ofde4 {
+    opacity: 1; 
+    transform: rotateY(0deg) translate(0px, 0px);
+  }
+  .css-1sxhvxh:hover, .css-1sxhvxh[data-hover] {
+    box-shadow: none;
+  }
+  .css-1ylu7un {
+    border: none; 
+    border-radius: 0px; 
+    font-size: 0.8rem; 
+    padding: 3px 12px; 
+    margin: 6px 0; 
+    width: fit-content; 
+    white-space: nowrap; 
+    Width: 150px;
+  }
+  .css-k1urot {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 6px; 
+    z-index: 1;
+  }
+  .css-x2gqu0, [href*="custom_tags"] span {
+    border-radius: 0; 
+    padding: 2px 8px; 
+    font-size: 0.7rem; 
+    white-space: nowrap;
+    color: #FFE033;
+  }
+  .css-2n7zf2 > div > div:not(:first-child):not(:last-child) > div, .css-2n7zf2 > div > div:not(:first-child):not(:last-child) > div > div:nth-child(-n+5):not(.css-1s5evre) {
+    background: transparent !important;
+  }
+  .css-1lgnt2x, .css-1m151rf, .css-fo6ddv:nth-child(2) {
+    display: none !important;
+  }
+  .css-1h8fads {
+    display: none;
+  }
+  .css-1sxhvxh:hover .css-zgqw37 {
+    color: white;
+    background: transparent;
+    top: 88%;
+    transition: 500ms;
+  }
+  /*Character Tab*/
+  .css-i3ef4m, .css-1pfxi6a {
+    display: none;
   }
   /*MainCore*/
   #MainCore #MainContentWrapper {
@@ -437,6 +554,9 @@
   /*End*/
   /*Mobile*/
   @media only screen and (max-width: 800px) {
+    .css-7ey189 {
+      margin-right: 0em;
+    }
     #HatsuneCore .giffey-message {
       font-size: 1.25em;
       left: 7em;
@@ -796,7 +916,7 @@
             <h2>Support me</h2>
             <div class="Content">
               <div class="Flow" style="gap: 2em;">
-                <a href="https://www.patreon.com/kklucy?redirect=true">
+                <a href="https://ko-fi.com/lucyleak">
                   <div class="spriteIcon">
                     <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/ImgStorage%20-%20Img%EC%A0%80%EC%9E%A5%EC%86%8C/Ko-fi.png?raw=true">
                   </div>
@@ -821,7 +941,7 @@
                 </div>
               </a>
               <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
-                <div class="ItemCountModule">1,384</div>
+                <div class="ItemCountModule">1k+</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
                     <img class="MiscIcon" src="https://github.com/LucyLeak/Lucy-s-JAI-repo/blob/main/Profile/%EC%A0%80%EC%9E%A5%EC%86%8C/team.png?raw=true">
