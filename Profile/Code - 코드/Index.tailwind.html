@@ -128,6 +128,25 @@
   #CoreFuction {
     position: relative;
   }
+  #HatsuneCore {
+    position: absolute;
+    user-select: none;
+    top: 180px;
+    left: -65px;
+  }
+  #HatsuneCore .giffey-message {
+    font-size: 2.25rem;
+    font-family: 'vt323', 'silkscreen';
+    color: #ffe818;
+    top: -140px;
+    position: relative;
+    left: 4.5em;
+  }
+  #HatsuneCore .giffey-content {
+    width: 100%;
+    top: 180px;
+    left: -65px;
+  }
   #CoreFunction .row {
     box-sizing: border-box;
     display: flex;
@@ -417,6 +436,16 @@
   /*End*/
   /*Mobile*/
   @media only screen and (max-width: 800px) {
+    #HatsuneCore .giffey-message {
+      font-size: 1.25em;
+      left: 7em;
+      top: -5.7em;
+    }
+    #HatsuneCore .giffey-content {
+      width: 40%;
+      left: -10px;
+      top: 5.3em;
+    }
     #CoreFunction {
         font-size: 90%;
     }
@@ -454,6 +483,16 @@
     }
   }
   @media (max-width: 768px) {
+    #HatsuneCore {
+      width: 42%;
+      left: -10px;
+      top: 12em;
+    }
+    #HatsuneCore .giffey-content {
+      width: 100%;
+      left: -10px;
+      top: 12em;
+    }
     #CoreFunction .row {
       flex-wrap: wrap !important;
       gap: 0.5em !important;
@@ -465,6 +504,16 @@
     }
   }
   @media (max-width: 480px) {
+    #HatsuneCore {
+      width: 42%;
+      left: -10px;
+      top: 12em;
+    }
+    #HatsuneCore .giffey-content {
+      width: 100%;
+      left: -10px;
+      top: 12em;
+    }
     #CoreStatsModule .Content {
       grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -485,6 +534,14 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="HatsuneCore">
+    <div class="giffey-box">
+      <div class="giffey-content">
+        <a href="https://files.catbox.moe/uksmql.gif" class="HatsuneDancin"><img src="https://files.catbox.moe/uksmql.gif"></a>
+      </div>
+      <span class="giffey-message">Creating amazing plots for you.</span>
     </div>
   </div>
   <div id="CoreFunction" class="cf">
@@ -733,6 +790,18 @@
                 </div>
                 </div>
               </div>
+          </div>
+          <div id="DonateModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
+            <h2>Support me</h2>
+            <div class="Content">
+              <div class="Flow" style="gap: 2em;">
+                <a href="https://www.patreon.com/kklucy?redirect=true">
+                  <div class="spriteIcon">
+                    <img class="MiscIcon" src="https://files.catbox.moe/uksmql.gif">
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
