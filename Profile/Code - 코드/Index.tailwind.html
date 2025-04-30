@@ -326,15 +326,15 @@
     display: inline-block;
     line-height: 0;
   }
-  .AvatarCore.HasClearanceLevel {
+  .AvatarCore.HasClearanceLevel, .AvatarFunction.HasClearanceLevel {
     box-shadow: 0 0 0 .125em #FF4E4E, 0 0 .75em #FF4E4E;
   }
-  .AvatarCore.IsRipeSupporter {
+  .AvatarCore.IsRipeSupporter, .AvatarFunction.IsRipeSupporter {
     background: linear-gradient(to bottom, rgba(219, 37, 37, 0.75), rgba(219, 204, 37, 0.75), rgba(37, 219, 41, 0.75), rgba(37, 37, 218, 0.75), rgba(219, 37, 217, 0.75));
     padding: .25em;
     border-radius: .125em;
   }
-  .AvatarCore.IsRipeSupporter img {
+  .AvatarCore.IsRipeSupporter img, .AvatarFunction.IsRipeSupporter img {
     box-shadow: 0 0 0 .125em rgba(0, 0, 0, .75);
   }
   .Avatar img {
@@ -469,7 +469,7 @@
   .AvatarTooltip .Column div strong {
     display: block;
   }
-  .AvatarTooltip .Column .OnlineStatus {
+  .AvatarTooltip .Column>:not(:first-child) {
     border-top: .125em solid rgba(255, 255, 255, .05);
   }
   .AvatarFunction:hover #Tippy1, .AvatarFunction:hover #Tippy2, .AvatarFunction:hover #Tippy3, .AvatarFunction:hover #Tippy4, .AvatarFunction:hover #Tippy5 {
@@ -478,6 +478,10 @@
   }
   .AvatarFunction:not(:hover) #Tippy1, .AvatarFunction:not(:hover) #Tippy2, .AvatarFunction:not(:hover) #Tippy3, .AvatarFunction:not(:hover) #Tippy4, .AvatarFunction:not(:hover) #Tippy5 {
     animation: HoverDisplayOut 30ms ease forwards;
+  }
+  .AvatarFunction {
+    width: 50px;
+    height: 50px;
   }
   /*Announcement*/
   .PageInfo {
@@ -799,9 +803,13 @@
                             </div>
                             <div class="OnlineStatus">
                               <dl>
-                                <dt>Content</dt>
                                 <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
                               </dl>
+                            </div>
+                            <div class="StatusLevel">
+                              <a href="https://janitorai.com/profiles/60c8ee34-a814-44db-99dd-5420b30f675d_profile-of-william-johnny">
+                                <img src="https://files.catbox.moe/ezpgwm.png">
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -809,7 +817,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="AvatarFunction">
+                <div class="AvatarFunction IsRipeSupporter HasClearanceLevel">
                   <a class="Avatar Offline" href="https://janitorai.com/profiles/f7ea4f46-d355-43f5-9045-50bca29f32c1_profile-of-seidhe" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://ella.janitorai.com/avatars/f7ea4f46-d355-43f5-9045-50bca29f32c1_18942850-285d-4686-84e8-df755b69c6d6.webp?width=50">
                   </a>
@@ -824,7 +832,6 @@
                             </div>
                             <div class="OnlineStatus">
                               <dl>
-                                <dt>Content</dt>
                                 <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
                               </dl>
                             </div>
@@ -849,7 +856,6 @@
                             </div>
                             <div class="OnlineStatus">
                               <dl>
-                                <dt>Content</dt>
                                 <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
                               </dl>
                             </div>
@@ -874,7 +880,6 @@
                             </div>
                             <div class="OnlineStatus">
                               <dl>
-                                <dt>Content</dt>
                                 <dd><div id="StateLabel"><div class="GreenColor">Bot Creator</div></dd>
                               </dl>
                             </div>
@@ -884,7 +889,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="AvatarFunction">
+                <div class="AvatarFunction IsRipeSupporter">
                   <a class="Avatar Offline" href="https://civitai.com/user/KoreanwithaT" aria-expanded="false">
                     <img loading="lazy" class="AvatarImage" src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a0735401-7f5d-4d8c-b4ad-276e90660c1c/width=450/Img.webp?width=50">
                   </a>
@@ -899,7 +904,6 @@
                             </div>
                             <div class="OnlineStatus">
                               <dl>
-                                <dt>Content</dt>
                                 <dd><div id="StateLabel"><div class="GreenColor">Ai Artist</div></dd>
                               </dl>
                             </div>
