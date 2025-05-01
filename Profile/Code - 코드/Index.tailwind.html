@@ -16,7 +16,7 @@
     color: #e2e2e2;
   }
   .css-eqxy32 {
-    margin-right: 12em;
+    margin-right: 15em;
   }
   .css-79elbk, .css-70qvj9, .css-1wnr83a, .css-wjj1lc, .css-hjkukh {
     display: none;
@@ -62,7 +62,7 @@
   }
   .css-96l1id {
     position: absolute; 
-    top: 120px; 
+    top: 10px; 
     left: 0; 
     width: 100%; 
     height: 89px; 
@@ -76,6 +76,7 @@
     display: flex; 
     align-items: center; 
     justify-content: center;
+    flex-wrap: wrap;
   }
   .css-4ofde4 {
     position: absolute; 
@@ -137,6 +138,44 @@
     background: transparent;
     top: 88%;
     transition: 500ms;
+  }
+  .css-euh5x6 {
+    flex-direction: row-reverse;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'silkscreen';
+    margin-right: 0px;
+    transition: 500ms;
+  }
+  .css-euh5x6>svg {
+    display: none;
+  }
+  .css-wexxj8 {
+    border-radius: 0 !important;
+    background: #0d0d0d80;
+    box-shadow: none;
+    transition: 500ms;
+  }
+  .css-10cv7r2 {
+    top: 0%;
+    transition: 500ms;
+  }
+  ._ribbon_1chl9_1 {
+    --f: 0px;
+    --r: 0px;
+    --t: 0px;
+  }
+  .css-1sxhvxh:hover .css-10cv7r2 {
+    top: 90%;
+    transition: 500ms;
+  }
+  .css-1sxhvxh:hover .css-euh5x6, .css-1sxhvxh:hover .css-wexxj8 {
+    background: transparent;
+    color: #FFE033;
+    transition: 500ms;
+  }
+  .css-1x9pkgk {
+    filter: none;
   }
   /*Character Tab*/
   .css-i3ef4m, .css-1fghc3k {
@@ -557,7 +596,7 @@
   }
   /*End*/
   /*Mobile*/
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 920px) {
     .css-eqxy32 {
       margin-right: 0em;
     }
@@ -584,8 +623,18 @@
       width: 100% !important;
       margin-right: 0 !important;
     }
-    #CoreFunction .row > .column[style*="width: 600px"] {
-      width: 100% !important;
+    #CoreFunction .row > .ColumnModuleThirdCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleSecondCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleFirstCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row {
+      flex-wrap: wrap !important;
+      gap: 0.5em !important;
     }
     .AutoGrid {
       grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)) !important;
@@ -602,9 +651,26 @@
     }
   }
   /*Diverse*/
+  @media (max-width: 1280px) {
+    #CoreFunction .row > .ColumnModuleThirdCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleSecondCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleFirstCore {
+      width: 50% !important;
+    }
+  }
   @media (max-width: 1024px) {
-    #CoreFunction .row > .column[style*="width: 600px"] {
-      width: 100% !important;
+    #CoreFunction .row > .ColumnModuleThirdCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleSecondCore {
+      width: 50% !important;
+    }
+    #CoreFunction .row > .ColumnModuleFirstCore {
+      width: 50% !important;
     }
   }
   @media (max-width: 768px) {
@@ -671,7 +737,7 @@
   </div>
   <div id="CoreFunction" class="cf">
     <div class="row">
-      <div class="column" style="width: 300px;">
+      <div class="column ColumnModuleFirstCore" style="width: 300px;">
         <div class="xs-12 sm-6 md-6 lg-3">
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
@@ -703,7 +769,7 @@
             <div class="Content">
               <dl>
                 <dt>Status</dt>
-                <dd><div id="StateLabel"><div class="GreenColor">Following myself</div></dd>
+                <dd><div id="StateLabel"><div class="GreenColor">Writing stuff</div></dd>
                 <dt>Last Seen</dt>
                 <dd>
                   <time class="TimeStamp LessThan5minsOld">10s</time>
@@ -714,8 +780,6 @@
                     <a href="https://janitorai.com/search?search=LucyLeak&mode=all">Characters</a>
                      > 
                     <a href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">LucyLeak</a>
-                     >
-                     Editing
                   </span>
                 </dd>
                 <dt>Time Online</dt>
@@ -782,7 +846,7 @@
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column ColumnModuleSecondCore">
         <div class="xs-12 sm-6 md-6 lg-3">
           <div id="BuddiesModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
             <h2><a href="https://github.com/LucyLeak/">Buddies</a></h2>
@@ -930,7 +994,7 @@
           </div>
         </div>
       </div>
-      <div class="column" style="width: 600px;">
+      <div class="column ColumnModuleThirdCore" style="width: 600px;">
         <div class="xs-12 sm-12 md-12 lg-6">
           <div id="CoreStatsModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
             <h2>Core Stats</h2>
