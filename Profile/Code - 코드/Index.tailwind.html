@@ -187,7 +187,7 @@
     position: relative;
     z-index: 1;
   }
-  #HeadlineWrapper {
+  #HeadlineWrapper, .WarningWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -206,9 +206,36 @@
     flex-basis: 50%;
     flex-grow: 1;
     flex-wrap: wrap;
-    padding: 5em 0em 10em 0em;
+    padding: 5em 0em 5em 0em;
     width: 100%;
     z-index: 1;
+  }
+  .WarningWrapper {
+    width: 100%;
+    position: fixed !important;
+    z-index: 5;
+    padding-top: 10px;
+    top: 5%;
+    left: 0px;
+  }
+  .Warning h1 {
+    font-size: 1.25em;
+    font-family: 'vt323', 'silkscreen';
+    font-weight: 500 !important;
+    color: black;
+  }
+  .Warning {
+    width: 100%;
+    padding: .3em;
+    background-color: #ff2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #spriteIcon .EmoteTypeIcon {
+    width: 22px;
+    height: 22px;
+    margin-left: 5px;
   }
   #PageTitle {
     font-size: 3em;
@@ -288,7 +315,7 @@
     position: absolute;
     user-select: none;
     pointer-events: none;
-    top: 140px;
+    top: 220px;
     left: -65px;
   }
   #HatsuneCore .giffey-message {
@@ -726,7 +753,17 @@
   <div id="CoreHeader">
     <div id="MainContentWrapper">
       <div id="MainContentHeader">
-        <div id="HealineWrapper">
+        <div class="WarningWrapper">
+          <div class="Warning">
+            <h1>Images with external links have been temporarily removed, and their return is indefinite. Follow me if you want...</h1>
+            <div id="spriteIcon">
+              <div class="EmoteTypeIcon">
+                <img class="EmoteIcon" src="https://ella.janitorai.com/profile-pics/OFBf4dNgC_dPcCCKuq-y7.webp?width=1000">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="HeadlineWrapper">
           <div id="Headline">
             <div>
               <h1 id="PageTitle" style="font-family: 'Open Sans', sans-serif;">LucyLeak</h1>
@@ -739,7 +776,7 @@
   <div id="HatsuneCore">
     <div class="giffey-box">
       <div class="giffey-content">
-        <a href="https://files.catbox.moe/uksmql.gif" class="HatsuneDancin"><img src="https://files.catbox.moe/uksmql.gif"></a>
+        <a href="https://files.catbox.moe/uksmql.gif" class="HatsuneDancin"><img src="https://ella.janitorai.com/profile-pics/bSJ58npH6D5TJUEIZZsZr.webp?width=1000"></a>
       </div>
       <span class="giffey-message">-Creating amazing plots for you!</span>
     </div>
@@ -751,7 +788,7 @@
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
               <a class="AvatarCore HasClearanceLevel IsRipeSupporter HdAvatar" href="https://files.catbox.moe/qcgzai.png" aria-expanded="false">
-                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/qcgzai.png" alt="LucyLeak" style="width: 150px; height: 150px; aspect-ratio: 1 / 1;">
+                <img loading="lazy" class="ImgAvatar" src="https://ella.janitorai.com/avatars/b2AJbccFxPg7s7WYYuJq_.webp?width=600" alt="LucyLeak" style="width: 150px; height: 150px; aspect-ratio: 1 / 1;">
               </a>
               <div>
                 <a class="MemberLink" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
@@ -822,7 +859,7 @@
               <dd>
                 <div id="spriteIcon">
                   <div class="ContactTypeIcon">
-                    <img class="DiscordIcon" src="https://files.catbox.moe/rg8qk7.png">
+                    <img class="DiscordIcon" src="https://ella.janitorai.com/profile-pics/QZSto3EWJLV6HwV1KPHM8.webp?width=1000">
                   </div>
                 </div>
                 <span> lucyleak</span>
@@ -831,7 +868,7 @@
               <dd>
                 <div id="spriteIcon">
                   <div class="ContactTypeIcon">
-                    <img class="PatreonIcon" src="https://files.catbox.moe/zdjk5x.png">
+                    <img class="PatreonIcon" src="https://ella.janitorai.com/profile-pics/lI8JP1JZr-7zON8JBD6B_.webp?width=1000">
                   </div>
                 </div>
                 <span><a href="https://www.patreon.com/c/kklucy"> kklucy</a></span>
@@ -995,7 +1032,7 @@
               <div class="Flow" style="gap: 2em;">
                 <a href="https://ko-fi.com/lucyleak">
                   <div class="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/vanfw6.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/TmZcy2oop5YT-4OeVv9lJ.webp?width=1000">
                   </div>
                 </a>
               </div>
@@ -1012,7 +1049,7 @@
                 <div class="ItemCountModule">45</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/65uebc.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/QVim3rC5oy5jHsHLmVA-D.webp?width=1000">
                   </div>
                   <small>Characters</small>
                 </div>
@@ -1021,7 +1058,7 @@
                 <div class="ItemCountModule">1k+</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/nym7wk.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/OFBf4dNgC_dPcCCKuq-y7.webp?width=1000">
                   </div>
                   <small>Followers</small>
                 </div>
@@ -1030,7 +1067,7 @@
                 <div class="ItemCountModule">100k+</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/jfnu5u.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/WsQgGmUVz89TpJzAKtCv5.webp?width=1000">
                   </div>
                   <small>Total chats</small>
                 </div>
@@ -1039,7 +1076,7 @@
                 <div class="ItemCountModule">5</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/n8vo38.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/K3C8m5lgEEWgjCPNZFYkJ.webp?width=1000">
                   </div>
                   <small>Buddies</small>
                 </div>
@@ -1048,7 +1085,7 @@
                 <div class="ItemCountModule">~470</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/7jmzhv.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/sh53HwGFwmr9LSiG2rBsx.webp?width=1000">
                   </div>
                   <small>Reactions</small>
                 </div>
@@ -1057,7 +1094,7 @@
                 <div class="ItemCountModule">AnyPov</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/snha9q.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/f_pdrr4RSnjSJRCIgqYuA.webp?width=1000">
                   </div>
                   <small>Top tag</small>
                 </div>
@@ -1066,7 +1103,7 @@
                 <div class="ItemCountModule">9mo</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
-                    <img class="MiscIcon" src="https://files.catbox.moe/vwoaf1.png">
+                    <img class="MiscIcon" src="https://ella.janitorai.com/profile-pics/jV_RyDcgRan3p9-3MYCQ5.webp?width=1000">
                   </div>
                   <small>Account age</small>
                 </div>
