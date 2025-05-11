@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comentários para Lucy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      position: relative;
+      text-align: center;
+      color: #ff80bf;
+    }
+
+    /* Botão de login admin invisível */
+    #admin-login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .notice {
+      background: #ff4d4d;
+      color: #fff;
+      padding: 0.8rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      border: 2px solid #333;
+      background: #1e1e1e;
+      color: #fff;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, textarea:focus {
+      outline: none;
+      border-color: #ff80bf;
+      box-shadow: 0 0 5px rgba(255, 128, 191, 0.5);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .char-count {
+      text-align: right;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 0.2rem;
+    }
+
+    button {
+      background: #ff80bf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+      width: auto;
+    }
+
+    .submit-btn:hover {
+      background: #e673c1;
+    }
+
+    .comment {
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .comment-text {
+      max-width: calc(100% - 90px);
+    }
+
+    .comment strong {
+      color: #ffb3d9;
+    }
+
+    .delete-btn {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.3s;
+      display: none; /* Inicialmente escondido */
+    }
+
+    .delete-btn:hover {
+      background: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Deixe um comentário para a Lucy 💬
+    <button id="admin-login" title="Login de administrador"></button>
+  </h1>
+  <div class="notice">
+    Observação: Comentários desrespeitosos ou que violem as diretrizes do JanitorAI serão deletados sem aviso.
+  </div>
+
+  <form id="comment-form">
+    <label>Seu nome:</label>
+    <input type="text" id="name" maxlength="30" placeholder="Digite seu nome" required>
+
+    <label>Comentário (máx. 100 caracteres):</label>
+    <textarea id="message" maxlength="100" placeholder="Escreva seu comentário..." required></textarea>
+    <div class="char-count" id="char-count">0/100</div>
+
+    <button type="submit" class="submit-btn">Enviar</button>
+  </form>
+
+  <section id="comments"></section>
+
+  <script>
+    const form = document.getElementById('comment-form');
+    const commentsSection = document.getElementById('comments');
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('char-count');
+    const adminBtn = document.getElementById('admin-login');
+    let comments = [];
+    const deleteToken = "seuTokenAqui"; // Token secreto
+    let isAdmin = false;
+
+    // Atualiza contador de caracteres
+    messageInput.addEventListener('input', () => {
+      charCount.textContent = `${messageInput.value.length}/100`;
+    });
+
+    // Login de administrador (botão invisível)
+    adminBtn.addEventListener('click', () => {
+      const token = prompt("Digite o token secreto para ativar modos de administrador:");
+      if (token === deleteToken) {
+        isAdmin = true;
+        renderComments();
+        alert("Modo administrador ativado. Botões de deletar agora estão visíveis.");
+      } else {
+        alert("Token inválido.");
+      }
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      let message = messageInput.value.trim();
+      if (message.length > 100) message = message.slice(0, 100);
+      if (name && message) {
+        comments.unshift({ name, message, timestamp: Date.now() });
+        renderComments();
+        form.reset();
+        charCount.textContent = '0/100';
+      }
+    });
+
+    function renderComments() {
+      commentsSection.innerHTML = '';
+      comments.slice(0, 10).forEach((c, index) => {
+        const el = document.createElement('div');
+        el.className = 'comment';
+        el.innerHTML = `<div class="comment-text"><strong>${c.name}</strong><br>${c.message}</div>`;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.textContent = 'Deletar';
+        deleteBtn.onclick = () => deleteComment(index);
+        if (isAdmin) deleteBtn.style.display = 'inline-block';
+
+        el.appendChild(deleteBtn);
+        commentsSection.appendChild(el);
+      });
+    }
+
+    function deleteComment(index) {
+      if (isAdmin) {
+        comments.splice(index, 1);
+        renderComments();
+      }
+    }
+  </script>
+
+</body>
+</html>
