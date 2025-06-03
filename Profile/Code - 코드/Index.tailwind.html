@@ -174,7 +174,7 @@
     color: #FFE033;
     transition: 500ms;
   }
-  .css-1x9pkgk {
+  .pp-page-background {
     filter: none;
   }
   /*Character Tab*/
@@ -316,14 +316,14 @@
     position: absolute;
     user-select: none;
     pointer-events: none;
-    top: 220px;
+    top: 22em;
     left: -65px;
   }
   #HatsuneCore .giffey-message {
     font-size: 2.25rem;
-    font-family: 'vt323', 'silkscreen';
+    font-family: 'Pixelify Sans';
     color: #ffe818;
-    top: -140px;
+    top: -5em;
     position: relative;
     left: 4.5em;
   }
@@ -331,6 +331,17 @@
     width: 100%;
     top: 180px;
     left: -65px;
+  }
+  .County {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    width: 100%;
+  }
+  #CounterGirlsCore .Girl {
+    margin-left: 1em;
+    width: 10%;
   }
   #CoreFunction .row {
     box-sizing: border-box;
@@ -641,6 +652,9 @@
       left: 7em;
       top: -5.7em;
     }
+    #CounterGirlsCore .Girl {
+      width: 10%;
+    }
     #HatsuneCore .giffey-content {
       width: 40%;
       left: -10px;
@@ -686,7 +700,7 @@
       font-size: 1.2rem !important;
     }
     #HatsuneCore {
-      top: 14.4em;
+      top: 20em;
       left: 0px;
     }
   }
@@ -716,8 +730,8 @@
   @media (max-width: 768px) {
     #HatsuneCore {
       width: 42%;
-      left: -10px;
-      top: 17.5em;
+      left: -60px;
+      top: 21em;
     }
     #HatsuneCore .giffey-content {
       width: 100%;
@@ -737,8 +751,8 @@
   @media (max-width: 480px) {
     #HatsuneCore {
       width: 42%;
-      left: -10px;
-      top: 17.5em;
+      left: -60px;
+      top: 21em;
     }
     #HatsuneCore .giffey-content {
       width: 100%;
@@ -759,10 +773,10 @@
       <div id="MainContentHeader">
         <div class="WarningWrapper">
           <div class="Warning">
-            <h1>You are not alone~</h1>
+            <h1>There will always have people who share your interests~</h1>
             <div id="spriteIcon">
               <div class="EmoteTypeIcon">
-                <img class="EmoteIcon" src="https://file.garden/aBwyjUWmbiEIZWXQ/ame.png">
+                <img class="EmoteIcon" src="https://file.garden/aBwyjUWmbiEIZWXQ/pixel.png">
               </div>
             </div>
           </div>
@@ -785,14 +799,24 @@
       <span class="giffey-message">~Creating amazing things for you!</span>
     </div>
   </div>
+  <div id="CounterGirlsCore">
+    <div class="CountyBox">
+      <div class="County">
+        <img class="Girl" src="https://gelbooru.com/counter/1.gif">
+        <img class="Girl" src="https://gelbooru.com/counter/5.gif">
+        <img class="Girl" src="https://gelbooru.com/counter/8.gif">
+        <img class="Girl" src="https://gelbooru.com/counter/0.gif">
+      </div>
+    </div>
+  </div>
   <div id="CoreFunction" class="cf">
     <div class="row">
       <div class="column ColumnModuleFirstCore" style="width: 300px;">
         <div class="xs-12 sm-6 md-6 lg-3">
           <div id="IdentityModule" config="[object Object]" class="PageModule StrangeBerryModule">
             <div class="Content">
-              <a class="AvatarCore HasClearanceLevel IsRipeSupporter HdAvatar" href="https://files.catbox.moe/qcgzai.png" aria-expanded="false">
-                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/42yntq.png" alt="LucyLeak" style="width: 150px; height: 150px; aspect-ratio: 1 / 1;">
+              <a class="AvatarCore HasClearanceLevel IsRipeSupporter HdAvatar" href="https://files.catbox.moe/rit5sa.jpg" aria-expanded="false">
+                <img loading="lazy" class="ImgAvatar" src="https://files.catbox.moe/rit5sa.jpg" alt="LucyLeak" style="width: 150px; height: 150px; aspect-ratio: 1 / 1;">
               </a>
               <div>
                 <a class="MemberLink" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">
@@ -824,21 +848,19 @@
                 <dd><div id="StateLabel"><div class="GreenColor">Writing stuff</div></dd>
                 <dt>Last Seen</dt>
                 <dd>
-                  <time class="TimeStamp LessThan5minsOld">50m</time>
+                  <time class="TimeStamp LessThan5minsOld">1mo</time>
                   <span>@</span>
                   <span class="BuddyLocation">
                     <a href="https://janitorai.com">Home</a>
-                     > 
-                    <a href="https://janitorai.com/search?search=LucyLeak&mode=all">Characters</a>
-                     > 
+                    >
+                    <a href="https://janitorai.com/search?mode=all&sort=popular&custom_tags=NotLeakedLucy&page=1">#NotLeakedLucy</a>
+                    >
                     <a href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">LucyLeak</a>
-                     >
-                    <a href="https://comment-janitorai.vercel.app/">Comments Module</a>
                   </span>
                 </dd>
                 <dt>Time Online</dt>
                 <dd>
-                  <time class="TimeStamp LessThan5minsOld">Always</time>
+                  <time class="TimeStamp LessThan5minsOld">Almost every week</time>
                 </dd>
               </dl>
             </div>
@@ -1077,7 +1099,7 @@
             </div>
           </div>
           <div id="CommentModule" config="[object Object]" class="PageModule StrangeBerryModule Module">
-            <h2>Comments</h2>
+            <h2><a href="https://comment-janitorai.vercel.app">Comments</a></h2>
             <div class="Content">
               <div class="Flow" style="gap: 2em;">
                 <a href="https://comment-janitorai.vercel.app">
@@ -1096,7 +1118,7 @@
             <h2>Core Stats</h2>
             <div class="Content Cluster">
               <a class="Card Stack" href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak#profile-tabs">
-                <div class="ItemCountModule">47</div>
+                <div class="ItemCountModule">48</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
                     <img class="MiscIcon" src="https://file.garden/aBwyjUWmbiEIZWXQ/trabalho-em-equipe.png">
@@ -1132,7 +1154,7 @@
                 </div>
               </a>
               <div class="Card Stack">
-                <div class="ItemCountModule">~470</div>
+                <div class="ItemCountModule">~500</div>
                 <div class="Cluster">
                   <div id="spriteIcon">
                     <img class="MiscIcon" src="https://file.garden/aBwyjUWmbiEIZWXQ/pixel.png">
