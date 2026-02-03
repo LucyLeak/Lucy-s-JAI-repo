@@ -1,29 +1,596 @@
 <style>
-    /*Purge Jai Stuff*/
-    .profile-info-hstack > .profile-avatar-container, .profile-info-hstack > .profile-info-stack-inner > .profile-info-stack-inner-flex, .profile-info-hstack > .profile-info-stack-inner > .chakra-stack, .profile-info-hstack > .profile-info-stack-inner > .profile-member-since-box, .chakra-tabs > .chakra-tabs__tablist {
+/* Jai Stuff baggy */
+    .chakra-tabs__tablist, .chakra-skeleton, .pp-uc-member-since, .profile-info-stack-inner-flex, .pp-uc-avatar-container, ._header_1lgb1_1 {
         display: none;
     }
-    /*Purge Jai Stuff (Closed)*/
-    /*MainModules*/
-    .ColumnFirstModule {
-        width: 300px;
+    .profile-page-flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
-    /*MainModules (Closed)*/
-    /*First Column Style*/
-    .Content {
-      
+    .profile-info-hstack {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
     }
-    /*First Column Style (Closed)*/
+    .profile-info-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #CoreStuff {
+        display: contents !important;
+        flex-direction: initial !important;
+        align-items: initial !important;
+    }
+    .css-jaw849 {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    :where(img, svg, video, canvas, audio, iframe, embed, object) {
+        display: revert;
+    }
+    .css-jaw849:hover, .css-jaw849[data-hover] {
+        box-shadow: none !important;
+    }
+/* Jai Stuff baggy (close) */
+/*Page Stuff*/
+body {
+    display: block;
+    margin: 8px;
+    font-family: "MS UI Gothic";
+    background-color: #f0efed;
+    overflow-y: scroll;
+    color: #000;
+}
+img {
+    clip-path: inset(0);
+    overflow: clip;
+}
+hr {
+    display: block !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: gray !important;
+    unicode-bidi: isolate !important;
+    overflow: hidden !important;
+    border-style: inset !important;
+    border-width: 0.5px !important;
+    border-color: #80808080 !important;
+}
+h1 {
+    color: #303030;
+    font-size: 24px !important;
+    font-weight: normal;
+    text-align: center;
+    font-family: VT323 !important;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    unicode-bidi: isolate;
+}
+a:link {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+a:visited {
+    color: #000 !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+li {
+    display: list-item;
+    unicode-bidi: isolate;
+}
+li::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: auto !important;
+}
+/*texture*/
+#Texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+}
+#TextureBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    user-select: none;
+}
+/*crt*/
+.crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    z-index: 9999;
+    pointer-events: none;
+}
+/*Container*/
+.Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 auto;
+    padding-top: 100px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 170px;
+    font-family: "MS UI Gothic";
+}
+.Header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    width: 1050px;
+    height: 150px;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+    overflow: hidden;
+}
+.Header img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+#Left-column {
+    margin: 3px;
+    float: left;
+    width: 160px;
+    height: auto;
+    padding-top: 4px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #D4D4D4;
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+    text-align: left;
+    box-sizing: border-box;
+    font-family: "MS UI Gothic";
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word;
+    white-space: normal;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#Holder {
+    margin: 5px;
+    width: 680px;
+    height: auto;
+    padding: 10px;
+    background: #D4D4D4;
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+    font-family: "MS UI Gothic";
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#Right-column {
+    margin: 5px;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    background: #D4D4D4;
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#Left-column > *:not(#Texture),
+#Right-column > *:not(#Texture) {
+    position: relative;
+    z-index: 2;
+}
+/*CoreBox*/
+.CoreBox {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: "MS UI Gothic";
+    font-size: 14px;
+    border: 12px solid #f0efed;
+    background-color: #f0efed;
+    mask: 
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 14px) calc(100% - 14px), 
+    radial-gradient(farthest-side,#000 97%,#0000) 
+    0 0/14px 14px round;
+}
+.Box:first-child {
+    grid-column: 1 / -1;
+}
+.Box:nth-child(2) {
+    grid-column: 1;
+}
+.Box:nth-child(3) {
+    grid-column: 2;
+}
+.Box:nth-child(4) {
+    grid-column: 1 / -1;
+}
+.Box:nth-child(5) {
+    grid-column: 1 / -1;
+}
+.Box {
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-family: "MS UI Gothic";
+    font-size: 14px;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #5e5e5e;
+    box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+#Maidcafe {
+    padding: .5em;
+    background-color: white;
+    border: 1px solid black;
+    font-family: PC98;
+    font-size: 14px;
+    height: 60px;
+    overflow-y: scroll;
+}
+.cute-cute {
+    display: grid;
+    grid-auto-rows: 28px;
+    gap: 30px 18px;
+    padding: 0 32px 56px 0;
+}
+/* hc-7 */
+.hc-7 {
+    grid-template-columns: repeat(7, 32px);
+}
+.hc-7 > :nth-child(14n+1), .hc-7 > :nth-child(14n+3), .hc-7 > :nth-child(14n+5), .hc-7 > :nth-child(14n+7), .hc-7 > :nth-child(14n+8), .hc-7 > :nth-child(14n+10), .hc-7 > :nth-child(14n+12), .hc-7 > :nth-child(14n) {
+    transform: rotate(35deg);
+    margin-top: 28px;
+    border: 1px solid #000;
+}
+.hc-7 > :nth-child(14n+2), .hc-7 > :nth-child(14n+4), .hc-7 > :nth-child(14n+6), .hc-7 > :nth-child(14n+9), .hc-7 > :nth-child(14n+11), .hc-7 > :nth-child(14n+13) {
+    transform: rotate(-35deg);
+    border: 1px solid #000;
+}
+/*Left Column*/
+.MenuBox {
+    border: 1px solid #5e5e5e;
+    background: #f2f2f2;
+    margin-top: -6px;
+}
+#Left-column .styled-link {
+    display: block;
+    padding: 4px 0;
+    padding-left: 4px;
+    color: #000;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+/*Holder*/
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.marquee > .track {
+    display: flex;
+    width: max-content;
+    animation: marquee 27s linear infinite;
+}
+.track > * {
+    display: block;
+    height: auto;
+    margin-right: 520px;
+}
+.track > span > img {
+    margin-right: 10px;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/*Right Column*/
+.tdl {
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    background-position: left;
+    background-size: 240px;
+    box-sizing: border-box;
+    padding: 4px;
+    padding-left: 16px;
+    border: 1px solid #5e5e5e;
+    overflow: hidden;
+    z-index: 1;
+}
+.tdl > *:not(#TextureBox) {
+    position: relative;
+    z-index: 2;
+}
 </style>
-<div class="MainCore">
-    <div id="CoreModules" class="cms">
-        <div class="row">
-            <div class="Column ColumnFirstModule cfm">
-                <div id="IdentifyModule" config="[object Object]" class="PageModule StrangeBerryModule">
-                    <div class="Content">
-
+<div id="CoreStuff">
+    <div class="crt"></div>
+    <div style="position: absolute; margin-top: 70px; margin-left: 830px; z-index: 4; filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.69)); pointer-events: none;">
+        <img src="https://c.feridinha.com/WokKz.png" width="350px"/>
+    </div>
+    <div class="Container">
+        <div class="Header">
+            <img src="https://c.feridinha.com/XdErC.png">
+        </div>
+        <div id="Left-column" class="Column">
+            <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
+            <img src="https://cdn.betterttv.net/emote/656a01b4459bcb974d026ed1/3x.webp" width="100%">
+            <p> </p>
+            <div class="MenuBox">
+                <h1>jai menu</h1>
+                <hr>
+                <a href="https://janitorai.com/" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    home
+                </a>
+                <a href="https://janitorai.com/create_character" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    create
+                </a>
+                <a href="https://janitorai.com/my_characters" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my characters
+                </a>
+                <a href="https://janitorai.com/scripts" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    scripts
+                </a>
+                <a href="https://janitorai.com/my_chats" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my chats
+                </a>
+                <a href="https://janitorai.com/my_personas" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my personas
+                </a>
+                <a href="https://janitorai.com/following" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    following
+                </a>
+                <a href="https://janitorai.com/blocks" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    blocks
+                </a>
+                <a href="https://janitorai.com/media-library" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my library
+                </a>
+                <a href="https://janitorai.com/profile-settings" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    settings
+                </a>
+            </div>
+            <p></p>
+            <p> </p>
+            <div class="MenuBox">
+                <h1>main</h1>
+                <hr>
+                <a href="https://kaththingy.neocities.org/about" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    about
+                </a>
+                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    communites
+                </a>
+                <a href="https://kaththingy.neocities.org/buddies" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my buddies
+                </a>
+                <a href="https://www.patreon.com/c/kklucy" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    patreon
+                </a>
+                <a href="https://janitorai.com/search?mode=all&sort=popular&custom_tags=NotLeakedLucy&page=1" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    my bots
+                </a>
+                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    neocities
+                </a>
+                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    comments
+                </a>
+                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    credits
+                </a>
+            </div>
+            <p> </p>
+            <h1>page thingy</h1>
+        </div>
+        <div id="Holder">
+            <div class="CoreBox">
+                <div class="Box">
+                    <div style="float: left; padding-right: 10px;">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" width="85px">
+                    </div>
+                    hello i'm lucy, and welcome to my page! this is where i post my bots and stuff, myn-4-mei is where i test my css and html stuff. my <a href="https://janitorai.com/profiles/1df006c3-c756-4555-a8ff-f66e018448b7_profile-of-myn-4-mei">profile</a> is always work in progress so don't expect lots of content here. if you want to follow me, feel free to do so, you can also see some of my buddies below. you can comment on my profile if you want to chat or something, just be nice.
+                </div>
+                <div class="Box">
+                    As everyone knows, janitor ai contains mature content. obviously nothing is too explicit on my profile, but i feel like i should put a warning here just in case. ~_~
+                    <hr>
+                    <img src="https://f.feridinha.com/q8uC8.jpg" width="100%">
+                </div>
+                <div class="Box">
+                    janitorai menu has been moved to the left menu for easier access.
+                    <hr>
+                    <div id="Maidcafe"></div>
+                    <hr>
+                    <div style="float:right; padding-left: 10px;">
+                        <img src="https://f.feridinha.com/1K9TA.gif" width="150px">
+                    </div>
+                    <p>
+                        every little bit helps me keep going and creating more content for you all! thank you so much for your support!
+                        if you want to reach me i'm on my discord <a href="https://discord.gg/MrR5XRC62Y">here</a> or you can leave a comment here on my <a href="https://comment-janitorai.vercel.app/">page</a>.
+                        <br>
+                        <br>
+                        super duper thingy
+                    </p>
+                    <p></p>
+                    <div class="cute-cute hc-7">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
                     </div>
                 </div>
+                <div class="Box">
+                    <div class="marquee">
+                        <div class="track">
+                            <span>
+                                <img src="https://kaththingy.neocities.org/buttons/button%20trans.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20freespeechforever.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20htmldream.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20ilovemusic.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20jap.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20neocities.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20sucks.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20vscode.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20webdesign.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20youreastar.gif">
+                            </span>
+                            <span>
+                                <img src="https://kaththingy.neocities.org/buttons/button%20trans.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20freespeechforever.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20htmldream.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20ilovemusic.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20jap.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20neocities.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20sucks.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20vscode.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20webdesign.gif">
+                                <img src="https://kaththingy.neocities.org/buttons/button%20youreastar.gif">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Box" style="text-align: center;">
+                    <h1 id="links">links</h1>
+                    <hr>
+                    <details>
+                        <summary>my gahh</summary>
+                        bluh bluh blah
+                    </details>
+                    <hr>
+                    <img src="https://f.feridinha.com/w2LZY.png" width="100%">
+                </div>
+            </div>
+        </div>
+        <div id="Right-column">
+            <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
+            <div class="Box"></div>
+            <div style="text-align: center; font-size: 12px;">
+                <a href="https://janitorai.com/profiles/1df006c3-c756-4555-a8ff-f66e018448b7_profile-of-myn-4-mei" class="styled-link">Lazyness</a>
+            </div>
+            <br>
+            <div class="Box">
+                <div style="text-align: center; font-size: 18px;">
+                    <h1>updates</h1>
+                </div>
+                <hr>
+                <div style="font-size: 14px;">
+                    <strong>2026-01-16:</strong> added CRT effect and some shadow to the floating image.
+                </div>
+            </div>
+            <br>
+            <div class="Box">
+                <div class="tdl">
+                    <img src="https://f.feridinha.com/M0oBD.png" id="TextureBox">
+                    <div style="text-align: center; font-size: 14px; color: #fff;">
+                        <h1 style="color: #fff;">to do list</h1>
+                    </div>
+                    <div style="font-size: 14px; overflow-y: scroll;">
+                        <ul>
+                            <li>make buddies part</li>
+                            <li>fix JAI Menu</li>
+                            <li>add more images</li>
+                            <li>add mobile support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="Box">
+                <a href="https://www.last.fm/user/LucyLeak">
+                    <img src="https://lastfm-recently-played.vercel.app/api?user=LucyLeak" height="auto" width="100%">
+                </a>
             </div>
         </div>
     </div>
