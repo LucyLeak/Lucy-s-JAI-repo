@@ -1,6 +1,6 @@
 <style>
 /* Jai Stuff baggy */
-    .chakra-tabs__tablist, .chakra-skeleton, .pp-uc-member-since, .profile-info-stack-inner-flex, .pp-uc-avatar-container, ._header_1lgb1_1 {
+    .chakra-tabs__tablist, .chakra-skeleton, .pp-uc-member-since, .profile-info-stack-inner-flex, .pp-uc-avatar-container, ._header_1lgb1_1, .character-list-pagination-box, .pp-cc-star-line, .profile-badges {
         display: none;
     }
     .profile-page-flex {
@@ -31,8 +31,99 @@
     :where(img, svg, video, canvas, audio, iframe, embed, object) {
         display: revert;
     }
-    .css-jaw849:hover, .css-jaw849[data-hover] {
+    .css-eqxy32:hover, .css-eqxy32[data-hover] {
         box-shadow: none !important;
+    }
+    .pp-top-bar {
+        padding: 10px;
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        text-align: left;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #5e5e5e;
+        box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+        background: #D4D4D4;
+    }
+    .pp-top-bar-back-button {
+        font-family: "MS UI Gothic";
+        color: #000
+    }
+    /* Jai Stuff charbox */
+    .pp-cc-wrapper, .pp-cc-gradient-1, .pp-cc-gradient-2, .pp-cc-gradient-3 {
+        border-radius: 0px !important;
+        background: #D4D4D4 !important;
+    }
+    .pp-cc-gradient-3 {
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        text-align: left;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #5e5e5e;
+        box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+        background: #D4D4D4;
+    }
+    .css-1q7rmf0 {
+        padding-bottom: 80% !important;
+    }
+    .css-1q7rmf0>*:not(style) {
+        padding: 3px;
+        border-radius: 0px;
+    }
+    .css-1aq5geu {
+        margin-top: 14rem;
+    }
+    .profile-character-card-stack-link-component-box {
+            height: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+    }
+    .pp-cc-name {
+        font-family: VT323 !important;
+        color: #000;
+        padding: 5px;
+        border: 1px solid #000;
+        background-color: #D4D4D4;
+        position: relative;
+        top: 10px;
+        z-index: 5;
+    }
+    .pp-cc-description {
+        color: #000;
+        font-size: 0.8rem;
+    }
+    .pp-cc-tags-item {
+        border-radius: 0px;
+        border: 1px solid #0400ff;
+        background: transparent;
+        color: #0400ff;
+    }
+    /* Jai Stuff charbox (close) */
+    .chakra-tabs__tab-panels {
+        margin-top: 1rem;
+    }
+
+    .pp-uc-options-menu,
+    .Btn {
+        padding: 10px;
+        background: #f2f2f2;
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        text-align: left;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #5e5e5e;
+        box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+        color: #000;
+        border-radius: 0px;
+    }
+    .css-e9kr8m {
+        font-family: "MS UI Gothic";
+    }
+    .Btn:before {
+        background: transparent;
+        color: #000;
     }
 /* Jai Stuff baggy (close) */
 /*Page Stuff*/
@@ -184,7 +275,7 @@ li::marker {
     width: auto;
     height: auto;
     object-fit: cover;
-    object-position: top;
+    object-position: 0px -13rem;
 }
 #Left-column {
     margin: 3px;
@@ -293,8 +384,8 @@ li::marker {
     border: 1px solid black;
     font-family: PC98;
     font-size: 14px;
-    height: 60px;
-    overflow-y: scroll;
+    height: 80px;
+    overflow-y: hidden;
 }
 .cute-cute {
     display: grid;
@@ -307,13 +398,11 @@ li::marker {
     grid-template-columns: repeat(7, 32px);
 }
 .hc-7 > :nth-child(14n+1), .hc-7 > :nth-child(14n+3), .hc-7 > :nth-child(14n+5), .hc-7 > :nth-child(14n+7), .hc-7 > :nth-child(14n+8), .hc-7 > :nth-child(14n+10), .hc-7 > :nth-child(14n+12), .hc-7 > :nth-child(14n) {
-    transform: rotate(35deg);
     margin-top: 28px;
-    border: 1px solid #000;
+    scale: 1.5;
 }
 .hc-7 > :nth-child(14n+2), .hc-7 > :nth-child(14n+4), .hc-7 > :nth-child(14n+6), .hc-7 > :nth-child(14n+9), .hc-7 > :nth-child(14n+11), .hc-7 > :nth-child(14n+13) {
-    transform: rotate(-35deg);
-    border: 1px solid #000;
+    scale: 2;
 }
 /*Left Column*/
 .MenuBox {
@@ -374,21 +463,64 @@ li::marker {
     position: relative;
     z-index: 2;
 }
+@media (max-width: 768px) {
+    .Container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #Left-column > .JaiBox {
+        display: none;
+    }
+    #Left-column, #Right-column {
+        width: 50%;
+    }
+    #Holder {
+        max-width: 100%;
+    }
+    .CoreBox {
+        display: flex;
+        flex-wrap: wrap;
+        width: 55%;
+        padding: 0px;
+    }
+    .Box:nth-child(3), .Box:nth-child(4) {
+        width: 100%;
+    }
+    .Chaty {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+    .Header {
+        width: 50%;
+    }
+    .Header img {
+        width: 100%;
+        height: 100%;
+        object-position: 0px 0px;
+    }
+    .chakra-tabs__tab-panels {
+        margin-top: 5rem;
+    }
+    .css-1aq5geu {
+        margin-top: 152rem;
+    }
+}
 </style>
 <div id="CoreStuff">
     <div class="crt"></div>
-    <div style="position: absolute; margin-top: 70px; margin-left: 830px; z-index: 4; filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.69)); pointer-events: none;">
-        <img src="https://c.feridinha.com/WokKz.png" width="350px"/>
+    <div style="position: absolute; margin-top: 110px; margin-left: 830px; z-index: 4; filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.69)); pointer-events: none; width: 100%;">
+        <img src="https://kaththingy.neocities.org/ImgStorage/title.png" width="350px"/>
     </div>
     <div class="Container">
         <div class="Header">
-            <img src="https://c.feridinha.com/XdErC.png">
+            <img src="https://kaththingy.neocities.org/ImgStorage/background.jpg">
         </div>
         <div id="Left-column" class="Column">
             <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
             <img src="https://cdn.betterttv.net/emote/656a01b4459bcb974d026ed1/3x.webp" width="100%">
             <p> </p>
-            <div class="MenuBox">
+            <div class="MenuBox JaiBox">
                 <h1>jai menu</h1>
                 <hr>
                 <a href="https://janitorai.com/" class="styled-link">
@@ -477,38 +609,41 @@ li::marker {
             <div class="CoreBox">
                 <div class="Box">
                     <div style="float: left; padding-right: 10px;">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" width="85px">
+                        <img src="https://i.pinimg.com/originals/26/a5/0a/26a50a2babfcb429a99fb0a2ae2ba0a2.gif" width="85px">
                     </div>
-                    hello i'm lucy, and welcome to my page! this is where i post my bots and stuff, myn-4-mei is where i test my css and html stuff. my <a href="https://janitorai.com/profiles/1df006c3-c756-4555-a8ff-f66e018448b7_profile-of-myn-4-mei">profile</a> is always work in progress so don't expect lots of content here. if you want to follow me, feel free to do so, you can also see some of my buddies below. you can comment on my profile if you want to chat or something, just be nice.
+                    hello i'm lucy, and welcome to my page! this is where i post my bots and stuff, myn-4-mei is where i test my css and html stuff. my <a href="https://janitorai.com/profiles/9e8fb842-fd61-48b4-91cd-c9ff573a4274_profile-of-lucyleak">profile</a> is always work in progress so don't expect lots of content here. if you want to follow me, feel free to do so, you can also see some of my buddies oh below. you can comment on my profile if you want to chat or something, just be nice.
                 </div>
                 <div class="Box">
-                    As everyone knows, janitor ai contains mature content. obviously nothing is too explicit on my profile, but i feel like i should put a warning here just in case. ~_~
+                    As everyone knows, janitor ai contains mature content (+18). nothing too explicit on my profile, but i feel like i should put a warning here just in case. ~_~
                     <hr>
                     <img src="https://f.feridinha.com/q8uC8.jpg" width="100%">
                 </div>
                 <div class="Box">
                     janitorai menu has been moved to the left menu for easier access.
                     <hr>
-                    <div id="Maidcafe"></div>
+                    <div id="Maidcafe">
+                        <a href="https://comment-janitorai.vercel.app/status">
+                            <img src="https://comment-janitorai.vercel.app/api/status/svg">
+                        </a>
+                    </div>
                     <hr>
                     <div style="float:right; padding-left: 10px;">
                         <img src="https://f.feridinha.com/1K9TA.gif" width="150px">
                     </div>
                     <p>
-                        every little bit helps me keep going and creating more content for you all! thank you so much for your support!
+                        every comment helps me keep going and creating more content for you all! thank you so much for your support!
                         if you want to reach me i'm on my discord <a href="https://discord.gg/MrR5XRC62Y">here</a> or you can leave a comment here on my <a href="https://comment-janitorai.vercel.app/">page</a>.
                         <br>
                         <br>
-                        super duper thingy
+                        this page is extremely, like, heavily inspired by <a href="https://miserabledolly.net/home">miserabledolly's</a> neocities page.
                     </p>
                     <p></p>
                     <div class="cute-cute hc-7">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
-                        <img src="https://c.feridinha.com/Ev7l2.jpg" class="obj-p">
+                        <img src="https://f.feridinha.com/Wh9P6.png" class="obj-p">
+                        <img src="https://f.feridinha.com/1PILC.png" class="obj-p">
+                        <img src="https://f.feridinha.com/nNckY.png" class="obj-p">
+                        <img src="https://f.feridinha.com/KFGnz.png" class="obj-p">
+                        <img src="https://f.feridinha.com/PP4kQ.png" class="obj-p">
                     </div>
                 </div>
                 <div class="Box">
@@ -555,7 +690,11 @@ li::marker {
         </div>
         <div id="Right-column">
             <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
-            <div class="Box"></div>
+            <div class="Box">
+                <a href="https://comment-janitorai.vercel.app/" class="Chaty">
+                    <img src="https://comment-janitorai.vercel.app/api/comments.svg">
+                </a>
+            </div>
             <div style="text-align: center; font-size: 12px;">
                 <a href="https://janitorai.com/profiles/1df006c3-c756-4555-a8ff-f66e018448b7_profile-of-myn-4-mei" class="styled-link">Lazyness</a>
             </div>
@@ -566,7 +705,7 @@ li::marker {
                 </div>
                 <hr>
                 <div style="font-size: 14px;">
-                    <strong>2026-01-16:</strong> added CRT effect and some shadow to the floating image.
+                    <strong>02-03:</strong> added comments and status page, avatar and emoji feature on comments.
                 </div>
             </div>
             <br>
@@ -574,14 +713,15 @@ li::marker {
                 <div class="tdl">
                     <img src="https://f.feridinha.com/M0oBD.png" id="TextureBox">
                     <div style="text-align: center; font-size: 14px; color: #fff;">
-                        <h1 style="color: #fff;">to do list</h1>
+                        <h1 style="color: #fff;">to do thingy</h1>
                     </div>
                     <div style="font-size: 14px; overflow-y: scroll;">
                         <ul>
-                            <li>make buddies part</li>
-                            <li>fix JAI Menu</li>
+                            <li>make buddies part (75%)</li>
+                            <li>fix JAI Menu (50%)</li>
+                            <li>fix grammar stuff (50%)</li>
                             <li>add more images</li>
-                            <li>add mobile support</li>
+                            <li>add mobile support (done)</li>
                         </ul>
                     </div>
                 </div>

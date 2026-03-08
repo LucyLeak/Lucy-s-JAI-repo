@@ -1,4 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const crtToggle = document.querySelector('[data-action="toggle-crt"]');
+    const textToggle = document.querySelector('[data-action="toggle-text"]');
+
+    const applyToggleState = () => {
+        const crtOff = localStorage.getItem("neo_crt_disabled") === "true";
+        const textLarge = localStorage.getItem("neo_text_large") === "true";
+
+        body.classList.toggle("crt-off", crtOff);
+        body.classList.toggle("text-large", textLarge);
+
+        if (crtToggle) {
+            crtToggle.setAttribute("aria-pressed", String(crtOff));
+            crtToggle.textContent = crtOff ? "CRT: off" : "CRT: on";
+        }
+        if (textToggle) {
+            textToggle.setAttribute("aria-pressed", String(textLarge));
+            textToggle.textContent = textLarge ? "Text: large" : "Text: normal";
+        }
+    };
+
+    if (crtToggle) {
+        crtToggle.addEventListener("click", () => {
+            const next = !(localStorage.getItem("neo_crt_disabled") === "true");
+            localStorage.setItem("neo_crt_disabled", String(next));
+            applyToggleState();
+        });
+    }
+
+    if (textToggle) {
+        textToggle.addEventListener("click", () => {
+            const next = !(localStorage.getItem("neo_text_large") === "true");
+            localStorage.setItem("neo_text_large", String(next));
+            applyToggleState();
+        });
+    }
+
+    applyToggleState();
+
     const pagers = document.querySelectorAll(".table-pager[data-for]");
 
     pagers.forEach((pager) => {
