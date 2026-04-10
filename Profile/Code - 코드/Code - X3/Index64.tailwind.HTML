@@ -392,17 +392,17 @@ li::marker {
     grid-auto-rows: 28px;
     gap: 30px 18px;
     padding: 0 32px 56px 0;
+    justify-content: center;
 }
 /* hc-7 */
+.obj-p {
+    transform: scale(2);
+}
 .hc-7 {
     grid-template-columns: repeat(7, 32px);
 }
 .hc-7 > :nth-child(14n+1), .hc-7 > :nth-child(14n+3), .hc-7 > :nth-child(14n+5), .hc-7 > :nth-child(14n+7), .hc-7 > :nth-child(14n+8), .hc-7 > :nth-child(14n+10), .hc-7 > :nth-child(14n+12), .hc-7 > :nth-child(14n) {
     margin-top: 28px;
-    scale: 1.5;
-}
-.hc-7 > :nth-child(14n+2), .hc-7 > :nth-child(14n+4), .hc-7 > :nth-child(14n+6), .hc-7 > :nth-child(14n+9), .hc-7 > :nth-child(14n+11), .hc-7 > :nth-child(14n+13) {
-    scale: 2;
 }
 /*Left Column*/
 .MenuBox {
@@ -417,6 +417,12 @@ li::marker {
     color: #000;
     background-color: #f2f2f2;
     text-decoration: none;
+}
+.SmlScreen {
+    display: none;
+}
+.LrgScreen {
+    display: block;
 }
 /*Holder*/
 .marquee {
@@ -505,6 +511,12 @@ li::marker {
     .css-1aq5geu {
         margin-top: 152rem;
     }
+    .LrgScreen {
+        display: none !important;
+    }
+    .SmlScreen {
+        display: block !important;
+    }
 }
 </style>
 <div id="CoreStuff">
@@ -573,7 +585,7 @@ li::marker {
                     <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
                     about
                 </a>
-                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                <a href="https://kaththingy.neocities.org/communities" class="styled-link">
                     <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
                     communites
                 </a>
@@ -593,7 +605,7 @@ li::marker {
                     <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
                     neocities
                 </a>
-                <a href="https://kaththingy.neocities.org/" class="styled-link">
+                <a href="https://comment-janitorai.vercel.app" class="styled-link">
                     <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
                     comments
                 </a>
@@ -619,7 +631,7 @@ li::marker {
                     <img src="https://f.feridinha.com/q8uC8.jpg" width="100%">
                 </div>
                 <div class="Box">
-                    janitorai menu has been moved to the left menu for easier access.
+                    janitorai menu has been moved to the left menu on pc for easier access.
                     <hr>
                     <div id="Maidcafe">
                         <a href="https://comment-janitorai.vercel.app/status">
@@ -639,11 +651,13 @@ li::marker {
                     </p>
                     <p></p>
                     <div class="cute-cute hc-7">
-                        <img src="https://f.feridinha.com/Wh9P6.png" class="obj-p">
-                        <img src="https://f.feridinha.com/1PILC.png" class="obj-p">
-                        <img src="https://f.feridinha.com/nNckY.png" class="obj-p">
-                        <img src="https://f.feridinha.com/KFGnz.png" class="obj-p">
-                        <img src="https://f.feridinha.com/PP4kQ.png" class="obj-p">
+                        <img src="https://f.feridinha.com/AabfV.png" class="obj-p">
+                        <img src="https://f.feridinha.com/a7YFK.png" class="obj-p">
+                        <img src="https://f.feridinha.com/iFVqs.png" class="obj-p">
+                        <img src="https://c.feridinha.com/twUnt.png" class="obj-p">
+                        <img src="https://c.feridinha.com/Mo3k3.png" class="obj-p">
+                        <img src="https://mooeena.neocities.org/img/honeycomb/moo/transgender.png" class="obj-p">
+                        <img src="https://mooeena.neocities.org/img/honeycomb/moo/she_her.png" class="obj-p">
                     </div>
                 </div>
                 <div class="Box">
@@ -692,7 +706,8 @@ li::marker {
             <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
             <div class="Box">
                 <a href="https://comment-janitorai.vercel.app/" class="Chaty">
-                    <img src="https://comment-janitorai.vercel.app/api/comments.svg">
+                    <img src="https://comment-janitorai.vercel.app/api/comments.svg" class="Comment LrgScreen">
+                    <img src="https://comment-janitorai.vercel.app/api/comments.mobile.svg" class="Comment SmlScreen">
                 </a>
             </div>
             <div style="text-align: center; font-size: 12px;">
@@ -705,7 +720,7 @@ li::marker {
                 </div>
                 <hr>
                 <div style="font-size: 14px;">
-                    <strong>02-03:</strong> added comments and status page, avatar and emoji feature on comments.
+                    <strong>21-03:</strong> fixed some grammar stuff.
                 </div>
             </div>
             <br>
