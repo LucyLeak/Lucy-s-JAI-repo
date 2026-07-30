@@ -45,7 +45,7 @@
         box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
         background: #D4D4D4;
     }
-    .pp-top-bar-back-button {
+    .pp-top-bar-back-button, .chakra-text {
         font-family: "MS UI Gothic";
         color: #000
     }
@@ -60,6 +60,9 @@
         border-color: #5e5e5e;
         box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
         background: #D4D4D4;
+    }
+    .chakra-icon {
+        color: #000;
     }
     /* Jai Stuff charbox */
     .pp-cc-wrapper, .pp-cc-gradient-1, .pp-cc-gradient-2, .pp-cc-gradient-3 {
@@ -481,6 +484,11 @@ li::marker {
     position: relative;
     z-index: 2;
 }
+@media screen and (min-width: 48em) {
+    .pp-uc-background {
+        max-width: none;
+    }
+}
 @media (max-width: 768px) {
     .Container {
         display: flex;
@@ -517,11 +525,21 @@ li::marker {
         height: 100%;
         object-position: 0px 0px;
     }
+    .cute-cute {
+        padding: 0 0px 56px 0;
+    }
+    .hc-7 {
+        grid-template-columns: repeat(7, 27px);
+    }
     .chakra-tabs__tab-panels {
         margin-top: 5rem;
     }
+    .profile-info-wrapper-box {
+        width: 20rem;
+    }
     .css-1aq5geu {
         margin-top: 152rem;
+        position: relative;
     }
     .LrgScreen {
         display: none !important;
@@ -548,43 +566,43 @@ li::marker {
                 <h1>jai menu</h1>
                 <hr>
                 <a href="https://janitorai.com/" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     home
                 </a>
                 <a href="https://janitorai.com/create_character" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     create
                 </a>
                 <a href="https://janitorai.com/my_characters" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my characters
                 </a>
                 <a href="https://janitorai.com/scripts" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     scripts
                 </a>
                 <a href="https://janitorai.com/my_chats" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my chats
                 </a>
                 <a href="https://janitorai.com/my_personas" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my personas
                 </a>
-                <a href="https://janitorai.com/following" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                <a href="https://janitorai.com/profile-settings?tab=following&connectionsTab=following" class="styled-link">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     following
                 </a>
-                <a href="https://janitorai.com/blocks" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                <a href="https://janitorai.com/profile-settings?tab=blocks&connectionsTab=blockedCreators" class="styled-link">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     blocks
                 </a>
                 <a href="https://janitorai.com/media-library" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my library
                 </a>
                 <a href="https://janitorai.com/profile-settings" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     settings
                 </a>
             </div>
@@ -594,35 +612,35 @@ li::marker {
                 <h1>main</h1>
                 <hr>
                 <a href="https://kaththingy.neocities.org/about" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     about
                 </a>
                 <a href="https://kaththingy.neocities.org/communities" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     communites
                 </a>
                 <a href="https://kaththingy.neocities.org/buddies" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my buddies
                 </a>
                 <a href="https://www.patreon.com/c/kklucy" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     patreon
                 </a>
                 <a href="https://janitorai.com/search?mode=all&sort=popular&custom_tags=NotLeakedLucy&page=1" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     my bots
                 </a>
                 <a href="https://kaththingy.neocities.org/" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     neocities
                 </a>
                 <a href="https://comment-janitorai.vercel.app" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     comments
                 </a>
                 <a href="https://kaththingy.neocities.org/" class="styled-link">
-                    <img src="https://i.pinimg.com/originals/bb/42/26/bb42262b0d941ecd34fe9043c17191a3.gif" width="10px">
+                    <img src="https://web.archive.org/web/20091027151148/http://geocities.com/eureka_cl/Newsletter/graphics/file_folder.gif" width="10px">
                     credits
                 </a>
             </div>
@@ -732,7 +750,7 @@ li::marker {
                 </div>
                 <hr>
                 <div style="font-size: 14px;">
-                    <strong>21-03:</strong> fixed some grammar stuff.
+                    <strong>21-07:</strong> fixed bugs on mobile.
                 </div>
             </div>
             <br>
@@ -746,8 +764,8 @@ li::marker {
                         <ul>
                             <li>make buddies part (75%)</li>
                             <li>fix JAI Menu (50%)</li>
-                            <li>fix grammar stuff (50%)</li>
-                            <li>add more images</li>
+                            <li>fix grammar stuff (done)</li>
+                            <li>support</li>
                             <li>add mobile support (done)</li>
                         </ul>
                     </div>
