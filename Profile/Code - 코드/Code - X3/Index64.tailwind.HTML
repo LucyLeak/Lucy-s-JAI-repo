@@ -1,6 +1,6 @@
 <style>
 /* Jai Stuff baggy */
-    .chakra-tabs__tablist, .chakra-skeleton, .pp-uc-member-since, .profile-info-stack-inner-flex, .pp-uc-avatar-container, .profile-top-bar-flex-outer, .character-list-pagination-box, .pp-cc-star-line, .profile-badges {
+    .chakra-tabs__tablist, .chakra-skeleton, .pp-uc-member-since, .profile-info-stack-inner-flex, .pp-uc-avatar-container, .profile-top-bar-flex-outer, .pp-cc-star-line, .profile-badges {
         display: none;
     }
     .profile-page-flex {
@@ -45,6 +45,70 @@
         box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
         background: #D4D4D4;
     }
+    .character-list-pagination-flex {
+        background: #D4D4D4;
+        border-width: 1px;
+        border-color: #000;
+        border-style: solid;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .Btn2-purple {
+        height: 40px;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        color: #000;
+        font-family: "MS UI Gothic";
+        box-shadow: none;
+    }
+    .profile-filters-flex-inner-hassearchfilter {
+        font-family: "MS UI Gothic";
+    }
+    .profile-filter-button {
+        border: none !important;
+
+    }
+    .pp-fl-filter-button-icon {
+        color: #000 !important;
+    }
+    ._searchInput_1ynn9_1:hover, ._searchInput_1ynn9_1:focus {
+        border: none !important;
+        box-shadow: 0 0 0 1px #0400ff;
+        color: #0400ff;
+    }
+    ._searchInput_1ynn9_1 {
+        font-family: "MS UI Gothic";
+    }
+    .css-1g2mcom:hover, .css-1g2mcom[data-hover] {
+        border-color: #0400ff;
+    }
+    .css-1g2mcom, .css-iw4ing {
+        border-radius: 0 !important;
+        color: #0400ff;
+    }
+    .chakra-input__right-element {
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        text-align: left;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #5e5e5e;
+        box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+        background: #D4D4D4;
+    }
+    .chakra-input__right-element > svg {
+        color: #000 !important;
+    }
+    .profile-character-search-input {
+        border: none !important;
+        outline: none !important;
+    }
+    .profile-character-search-input::placeholder {
+        color: #000;
+        font-family: "MS UI Gothic";
+    }
     .pp-top-bar-back-button, .chakra-text {
         font-family: "MS UI Gothic";
         color: #000
@@ -61,8 +125,98 @@
         box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
         background: #D4D4D4;
     }
-    .chakra-icon {
+    .chakra-icon, .pp-fl-tags-expand > svg, ._navigationButton_3343k_104 > svg {
         color: #000;
+    }
+    .pp-fl-tags-expand > svg > path, ._navigationButton_3343k_104 > svg > path {
+        stroke: black;
+        stroke-width: 1px;
+    }
+    .css-1n6p0lj {
+        margin: auto;
+        box-sizing: border-box;
+        padding: 5px;
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        border: 12px solid #f0efed !important;
+        background-color: #f0efed !important;
+        mask: linear-gradient(#000 0 0) no-repeat 50%/calc(100% - 14px) calc(100% - 14px), radial-gradient(farthest-side,#000 97%,#0000) 0 0/14px 14px round;
+    }
+    .chakra-modal__header, .chakra-modal__body {
+        padding: 10px;
+        margin: 5px;
+        font-family: "MS UI Gothic";
+        font-size: 14px;
+        text-align: left;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #5e5e5e;
+        box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+        background: #D4D4D4;
+    }
+    ._gradientRight_3343k_36 {
+        background: linear-gradient(90deg,transparent 0%,#D4D4D4 50%,#D4D4D4 50%,#D4D4D4 100%);
+    }
+    ._gradientLeft_3343k_19 {
+        background: linear-gradient(270deg,transparent 0%,#D4D4D4 50%,#D4D4D4 50%,#D4D4D4 100%);
+    }
+    .chakra-modal__header, .pp-fl-tags-heading {
+        color: #000;
+        font-family: "MS UI Gothic";
+    }
+    .pp-fl-tags-filter {
+        background: #D4D4D4;
+        border-width: 1px;
+        border-color: #000;
+        border-style: solid;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    ._tag_fgxac_6 {
+        border: none !important;
+        color: #000;
+    }
+    ._tag_fgxac_6:hover {
+        border: none !important;
+        color: #0400ff;
+        text-decoration: underline;
+    }
+    ._tagSelected_fgxac_42 {
+        box-shadow: none;
+        text-shadow: 0 0 15px color-mix(in srgb, #0400ff 40%, transparent), 0 0 25px color-mix(in srgb, #0400ff 30%, transparent);
+    }
+    ._navigationButton_3343k_104 {
+        background: #D4D4D4;
+        border-width: 1px;
+        border-color: #000;
+        border-style: solid;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: inset 10px 0px 6px -5px rgba(66, 66, 66, 0.07), inset -13px 0px 6px -10px rgba(66, 66, 66, 0.6), inset 0px 13px 6px -10px #ffffffa3, inset 0px -13px 6px -10px rgba(66, 66, 66, 0.5);
+        border-radius: 0;
+    }
+    .pp-fl-tags-expand {
+        background: #D4D4D4;
+        border-width: 1px;
+        border-color: #000;
+        border-style: solid;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: inset 10px 0px 6px -5px rgba(66, 66, 66, 0.07), inset -13px 0px 6px -10px rgba(66, 66, 66, 0.6), inset 0px 13px 6px -10px #ffffffa3, inset 0px -13px 6px -10px rgba(66, 66, 66, 0.5);
+        border-radius: 0;
+    }
+    .chakra-modal__close-btn {
+        background: #cb2424;
+        border-width: 1px;
+        border-color: #000;
+        border-style: solid;
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: inset 10px 0px 6px -5px rgba(66, 66, 66, 0.07), inset -13px 0px 6px -10px rgba(66, 66, 66, 0.6), inset 0px 13px 6px -10px #ffffffa3, inset 0px -13px 6px -10px rgba(66, 66, 66, 0.5);
+        top: -13px;
+        border-radius: 0;
     }
     /* Jai Stuff charbox */
     .pp-cc-wrapper, .pp-cc-gradient-1, .pp-cc-gradient-2, .pp-cc-gradient-3 {
@@ -552,15 +706,15 @@ li::marker {
 <div id="CoreStuff">
     <div class="crt"></div>
     <div style="position: absolute; margin-top: 110px; margin-left: 830px; z-index: 4; filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.69)); pointer-events: none; width: 100%;">
-        <img src="https://kaththingy.neocities.org/ImgStorage/title.png" width="350px"/>
+        <img src="https://kaththingy.neocities.org/ImgStorage/titlealt.png" width="350px"/>
     </div>
     <div class="Container">
         <div class="Header">
-            <img src="https://kaththingy.neocities.org/ImgStorage/background.jpg">
+            <img src="https://kaththingy.neocities.org/ImgStorage/backgalt.jpeg">
         </div>
         <div id="Left-column" class="Column">
             <img src="https://c.feridinha.com/s6MUE.png" id="Texture">
-            <img src="https://cdn.betterttv.net/emote/656a01b4459bcb974d026ed1/3x.webp" width="100%">
+            <img src="https://cdn.7tv.app/emote/01FW7RRSQG000087VQP9406JEZ/4x.avif" width="100%">
             <p> </p>
             <div class="MenuBox JaiBox">
                 <h1>jai menu</h1>
